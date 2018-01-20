@@ -1,0 +1,120 @@
+.page-wrap {
+    margin: 0 auto;
+}
+
+.page-wrap .page-title {
+    text-align: center;
+}
+.page-wrap .page-title h2{
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 2px solid #4ac8bb;
+
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+/* table list */
+.inout-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.inout-table .inout-head .inout-cell {
+    height: 100px;    
+    border-bottom: 1px solid #b2b2b2;
+
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 60px;
+    text-align: left;
+    color: #4d4d4d;
+}
+
+.inout-table .inout-head .cell-date {
+    width: 15%;
+}
+
+.inout-table .inout-head .cell-resource {
+    width: 35%;
+}
+
+.inout-table .inout-head .cell-type {
+    width: 15%;
+}
+
+.inout-table .inout-head .cell-unit {
+    width: 35%;
+}
+
+
+
+.date-icon {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.date-icon .date-icon-up {
+    display: block;
+    position: absolute;
+    top: -2px;
+
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;    
+    border-right: 5px solid transparent;    
+    border-bottom: 10px solid #9b9b9b;
+}
+
+.date-icon .date-icon-up.active {
+    border-bottom-color:#4d4d4d;
+}
+
+.date-icon .date-icon-down.active {
+    border-top-color: #4d4d4d;
+}
+
+.date-icon .date-icon-down {
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #9b9b9b;
+}
+
+.inout-table .inout-item {
+    height: 120px;
+    border-bottom: 1px solid #b2b2b2;
+    font-size: 16px;
+    color: #5f5f5f;
+}
+
+.inout-table .inout-item .cell-unit {
+    color: #5bd4c8; 
+}
+
+
+
+.page-footer .speak {
+    display: block;
+    margin: 100px 0 100px 0;
+    font-size: 16px;
+    color: #5bd4c8;
+}
+
+.page-footer .resource {
+    font-size: 16px;
+    color: #4c4c4c
+}

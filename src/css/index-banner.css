@@ -1,0 +1,29 @@
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 740px;
+    text-align: center;
+    background: url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+}
+
+.banner-container .banner-title {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+}
+
+.banner-container .banner-title .title-large {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 50px;
+}
+
+.banner-container .banner-title .title-small {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 50px;
+}

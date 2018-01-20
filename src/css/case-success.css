@@ -1,0 +1,128 @@
+.page-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* page-wrap */
+.page-wrap {
+    padding-top: 60px;
+    font-family: "Microsoft SimHei" sans-serif;
+    text-align: center;
+}
+
+.page-wrap .page-title {
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 2px solid #4ac8bb;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+.page-wrap .page-body {
+    margin-top: 106px;
+    text-align: left;
+}
+
+.case-list {
+    overflow: hidden; 
+}
+
+.case-list .case-item {
+    overflow: hidden;
+    position: relative;
+    height: 304px;
+    margin-top: 68px;
+}
+
+
+.case-list .case-item .item-img {
+    float: right;    
+    width: 336px;
+    cursor: pointer;
+}
+
+.case-item .item-img:hover {
+
+}
+
+.case-item .item-img img {
+    height: 303px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+
+
+.case-list .case-item .item-body {
+    position: relative;
+    margin-right: 386px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #8a8a8a;
+}
+
+.post-title {
+    display: inline-block;    
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-weight: normal;
+    color: #4c4c4c;
+}
+
+.post-date {
+    position: absolute;
+    right: 0;
+    top: 6px;
+
+    font-size: 16px;
+    color: #8a8a8a;
+}
+
+.post-content {
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+
+    font-size: 16px;
+    line-height: 42px;
+    color: #8a8a8a;
+
+}
+
+/* 使用相对定位的容器高度，用包含省略号(…)的元素模拟实现 */
+.post-content::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 4px 20px;
+    font-weight: bold;
+    background: #fff;
+}
+
+.item-body .more {
+    margin-top: 75px;
+}
+
+.item-body .more .read-more {
+    display: block;
+    height: 56px;
+    width: 208px;
+    border: 1px solid #4ac8bb;
+    border-radius: 10px;
+
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 56px;
+    color: #4ac8bb;
+}
+
+.item-body .more .read-more:hover {
+    background: #4ac8bb;
+    color: #fff;
+}
+
