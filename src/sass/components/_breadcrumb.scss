@@ -1,0 +1,31 @@
+/* breadcrumb */
+
+.breadcrumb {
+    margin-top: 43px;
+    padding: 10px 0;
+    color: #727272;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.breadcrumb li a {
+    color: #727272;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+    color: #a8a8a8;
+    text-decoration: underline;
+}
+
+.breadcrumb li + li:before {
+    padding: 0 5px;
+    content: ">>";
+}
+
+.breadcrumb .active {
+    color: #47c8bc;
+}

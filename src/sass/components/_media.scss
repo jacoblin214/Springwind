@@ -1,0 +1,24 @@
+// media
+$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+$breakpoints: (
+    "medium": (min-width: 800px),
+    "large": (min-width: 1000px),
+    "huge": (min-width: 1200px)
+);
+@mixin respond-to($breakpoints) {
+    @if $breakpoints=="small" {
+        @media (min-width: 767px) {
+            @content;
+        }
+    } @else if $breakpoints=="medium" {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoints=="large" {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}

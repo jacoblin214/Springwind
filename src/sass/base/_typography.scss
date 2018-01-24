@@ -1,0 +1,15 @@
+/* common style */
+
+.inner-center {
+    width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearfix::after {
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    display: block;
+    clear: both;
+}

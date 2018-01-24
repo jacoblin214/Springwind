@@ -1,0 +1,78 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-07 5:54:55 pm 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-07 6:08:30 pm 
+ */
+
+.page-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page-wrap .page-title {
+    text-align: center;
+}
+
+.page-wrap .page-title h2 {
+    display: inline-block;
+    padding: 10px 0;
+    /* border-bottom: 2px solid #4ac8bb; */
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+/* mod-forgot */
+
+.mod-forgot {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 108px;
+    text-align: center;
+}
+
+.mod-forgot .count-text {
+    margin-top: 44px;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.mod-forgot .count-text .countdown {
+    display: inline-block;
+    color: #4ac8bb;
+    padding-right: 10px;
+}
+
+/* btn-groups */
+
+.btn-groups {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.btn-groups .opera-btn {
+    display: inline-block;
+    width: 108px;
+    height: 34px;
+    border-radius: 2px;
+    border: 0;
+
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    background: #5cd6c7;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-groups .opera-btn:hover {
+    color: #f0f0f0;
+    background: #72f1e1;
+}
+
+.btn-groups .opera-btn + .opera-btn {
+    margin-left: 32px;
+}

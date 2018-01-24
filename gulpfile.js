@@ -2,145 +2,176 @@
 /*!
  * gulp
  * npm install -g gulp
- * $ npm install gulp gulp-ruby-sass gulp-cached gulp-uglify gulp-rename gulp-concat gulp-notify gulp-filter gulp-jshint gulp-rev-append gulp-cssnano gulp-imagemin browser-sync gulp-file-include gulp-autoprefixer del gem install sass --save-dev
+ * $ npm install gulp gulp-ruby-sass  gulp-cached gulp-uglify gulp-rename gulp-concat gulp-notify gulp-filter gulp-jshint gulp-rev-append gulp-cssnano gulp-imagemin browser-sync gulp-file-include gulp-autoprefixer del  gem install sass --save-dev
  */
 
 // Load plugins
-var gulp = require('gulp'), // 必须先引入gulp插件
-    del = require('del'),  // 文件删除
-    sass = require('gulp-ruby-sass'), // sass 编译
-    cached = require('gulp-cached'), // 缓存当前任务中的文件，只让已修改的文件通过管道
-    uglify = require('gulp-uglify'), // js 压缩
-    rename = require('gulp-rename'), // 重命名
-    concat = require('gulp-concat'), // 合并文件
-    notify = require('gulp-notify'), // 相当于 console.log()
-    filter = require('gulp-filter'), // 过滤筛选指定文件
-    jshint = require('gulp-jshint'), // js 语法校验
-    rev = require('gulp-rev-append'), // 插入文件指纹（MD5）
-    cssnano = require('gulp-cssnano'), // CSS 压缩
-    imagemin = require('gulp-imagemin'), // 图片优化
-    browserSync = require('browser-sync'), // 保存自动刷新
-    fileinclude = require('gulp-file-include'), // 可以 include html 文件
-    autoprefixer = require('gulp-autoprefixer'), // 添加 CSS 浏览器前缀
-    postcss = require('gulp-postcss'),
-    fs = require('fs'),
-    path = require('path'),
-    merge = require('merge-stream');
+var gulp = require("gulp"), // ����������gulp���
+    del = require("del"), // �ļ�ɾ��
+    sass = require("gulp-ruby-sass"), // sass ����
+    cached = require("gulp-cached"), // ���浱ǰ�����е��ļ���ֻ�����޸ĵ��ļ�ͨ���ܵ�
+    uglify = require("gulp-uglify"), // js ѹ��
+    rename = require("gulp-rename"), // ������
+    concat = require("gulp-concat"), // �ϲ��ļ�
+    notify = require("gulp-notify"), // �൱�� console.log()
+    filter = require("gulp-filter"), // ����ɸѡָ���ļ�
+    jshint = require("gulp-jshint"), // js �﷨У��
+    rev = require("gulp-rev-append"), // �����ļ�ָ�ƣ�MD5��
+    cssnano = require("gulp-cssnano"), // CSS ѹ��
+    imagemin = require("gulp-imagemin"), // ͼƬ�Ż�
+    browserSync = require("browser-sync"), // �����Զ�ˢ��
+    fileinclude = require("gulp-file-include"), // ���� include html �ļ�
+    autoprefixer = require("gulp-autoprefixer"), // ��� CSS �����ǰ׺
+    // postcss = require('gulp-postcss'),
+    fs = require("fs"),
+    path = require("path"),
+    merge = require("merge-stream"),
+    gutil = require("gulp-util");
 
-var scriptsPath = 'src/js';
-var distPath = 'dist';
+var scriptsPath = "src/js";
+var distPath = "dist";
 
 function getFolders(dir) {
-    return fs.readdirSync(dir)
-        .filter(function (file) {
-            return fs.statSync(path.join(dir, file)).isDirectory();
-        });
+    return fs.readdirSync(dir).filter(function(file) {
+        return fs.statSync(path.join(dir, file)).isDirectory();
+    });
 }
 
 // sass
-gulp.task('sass', function () {
-    return sass('src/sass/**/*.scss', { style: 'expanded' })  // 传入 sass 目录及子目录下的所有 .scss 文件生成文件流通过管道并设置输出格式
-        .pipe(cached('sass'))  // 缓存传入文件，只让已修改的文件通过管道（第一次执行是全部通过，因为还没有记录缓存）
-        .pipe(autoprefixer({
-            browsers: ['last 6 versions']
-        }))
+gulp.task("sass", function() {
+    return sass("src/sass/**/*.scss", { style: "expanded" }) // ���� sass Ŀ¼����Ŀ¼�µ����� .scss �ļ������ļ���ͨ���ܵ������������ʽ
+        .pipe(cached("sass")) // ���洫���ļ���ֻ�����޸ĵ��ļ�ͨ���ܵ�����һ��ִ����ȫ��ͨ������Ϊ��û�м�¼���棩
+        .pipe(
+            autoprefixer({
+                browsers: ["last 6 versions"]
+            })
+        )
 
-        .pipe(gulp.dest('dist/css')) // 输出到 dist/css 目录下（不影响此时管道里的文件流）
-        .pipe(rename({ suffix: '.min' })) // 对管道里的文件流添加 .min 的重命名
-        .pipe(cssnano()) // 压缩 CSS
-        .pipe(gulp.dest('dist/css')) // 输出到 dist/css 目录下，此时每个文件都有压缩（*.min.css）和未压缩(*.css)两个版本
+        .pipe(gulp.dest("dist/css")) // ����� dist/css Ŀ¼�£���Ӱ���ʱ�ܵ�����ļ�����
+        .pipe(rename({ suffix: ".min" })) // �Թܵ�����ļ������ .min ��������
+        .pipe(cssnano()) // ѹ�� CSS
+        .pipe(gulp.dest("dist/css")); // ����� dist/css Ŀ¼�£���ʱÿ���ļ�����ѹ����*.min.css����δѹ��(*.css)�����汾
 });
 
-// css （拷贝 *.min.css，常规 CSS 则输出压缩与未压缩两个版本）
-gulp.task('css', function () {
-    return gulp.src('src/css/**/*.css')
-        .pipe(cached('css'))
-        .pipe(gulp.dest('dist/css')) // 把管道里的所有文件输出到 dist/css 目录
-        .pipe(filter(['**/*', '!**/*.min.css'])) // 筛选出管道中的非 *.min.css 文件
-        .pipe(autoprefixer({
-            browsers: ['last 6 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist/css')) // 把处理过的 css 输出到 dist/css 目录
-        .pipe(rename({ suffix: '.min' }))
+// css ������ *.min.css������ CSS �����ѹ����δѹ�������汾��
+gulp.task("css", function() {
+    return gulp
+        .src("src/css/**/*.css")
+        .pipe(cached("css"))
+        .pipe(gulp.dest("dist/css")) // �ѹܵ���������ļ������ dist/css Ŀ¼
+        .pipe(filter(["**/*", "!**/*.min.css"])) // ɸѡ���ܵ��еķ� *.min.css �ļ�
+        .pipe(
+            autoprefixer({
+                browsers: ["last 6 versions"],
+                cascade: false
+            })
+        )
+        .pipe(gulp.dest("dist/css")) // �Ѵ������ css ����� dist/css Ŀ¼
+        .pipe(rename({ suffix: ".min" }))
         .pipe(cssnano())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest("dist/css"));
 });
 
-// styleReload （结合 watch 任务，无刷新CSS注入）
-gulp.task('styleReload', ['sass', 'css'], function () {
-    return gulp.src(['dist/css/**/*.css'])
-        .pipe(cached('style'))
-        .pipe(browserSync.reload({ stream: true })); // 使用无刷新 browserSync 注入 CSS
+// styleReload ����� watch ������ˢ��CSSע�룩
+gulp.task("styleReload", ["sass", "css"], function() {
+    return gulp
+        .src(["dist/css/**/*.css"])
+        .pipe(cached("style"))
+        .pipe(browserSync.reload({ stream: true })); // ʹ����ˢ�� browserSync ע�� CSS
 });
 
-// script （拷贝 *.min.js，常规 js 则输出压缩与未压缩两个版本）
-gulp.task('script', function () {
-
-    return gulp.src(['src/js/**/*.js'])
-        .pipe(cached('script'))
-        .pipe(gulp.dest('dist/js'))
-        .pipe(filter(['**/*', '!**/*.min.js'])) // 筛选出管道中的非 *.min.js 文件
-        // .pipe(jshint('.jshintrc')) // js的校验与合并，根据需要开启
-        // .pipe(jshint.reporter('default'))
-        // .pipe(concat('main.js'))
-        // .pipe(gulp.dest('dist/js'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
+// script ������ *.min.js������ js �����ѹ����δѹ�������汾��
+gulp.task("script", function() {
+    return (gulp
+            .src(["src/js/**/*.js"])
+            .pipe(cached("script"))
+            .pipe(gulp.dest("dist/js"))
+            .pipe(filter(["**/*", "!**/*.min.js"])) // ɸѡ���ܵ��еķ� *.min.js �ļ�
+            // .pipe(jshint('.jshintrc')) // js��У����ϲ���������Ҫ����
+            // .pipe(jshint.reporter('default'))
+            // .pipe(concat('main.js'))
+            // .pipe(gulp.dest('dist/js'))
+            // .pipe(rename({ suffix: ".min" }))
+            // .pipe(uglify())
+            .on("error", function(err) {
+                gutil.log(gutil.colors.red("[Errors]"), err.toString());
+            })
+            .pipe(gulp.dest("./dist/js")) );
+    // .pipe(livereload()) );
 });
 
 // image
-gulp.task('image', function () {
-    return gulp.src('src/images/**/*.{jpg,jpeg,png,gif}')
-        .pipe(cached('images'))
-        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true, multipass: true }))
-        // 取值范围：0-7（优化等级）,是否无损压缩jpg图片，是否隔行扫描gif进行渲染，是否多次优化svg直到完全优化
-        .pipe(gulp.dest('dist/images'))
+gulp.task("image", function() {
+    return (gulp
+            .src("src/images/**/*.{jpg,jpeg,png,gif}")
+            .pipe(cached("images"))
+            .pipe(
+                imagemin({
+                    optimizationLevel: 3,
+                    progressive: true,
+                    interlaced: true,
+                    multipass: true
+                })
+            )
+            // ȡֵ��Χ��0-7���Ż��ȼ���,�Ƿ�����ѹ��jpgͼƬ���Ƿ����ɨ��gif������Ⱦ���Ƿ����Ż�svgֱ����ȫ�Ż�
+            .pipe(gulp.dest("dist/images")) );
 });
 
-// html 编译 html 文件并复制字体
-gulp.task('html', function () {
-    return gulp.src('src/*/*.html')
+// html ���� html �ļ�����������
+gulp.task("html", function() {
+    return gulp
+        .src("src/*/*.html")
         .pipe(fileinclude()) // include html
-        .pipe(rev()) // 生成并插入 MD5
-        .pipe(gulp.dest('dist'))
+        .pipe(rev()) // ���ɲ����� MD5
+        .pipe(gulp.dest("dist"));
 });
 
-// clean 清空 dist 目录
-gulp.task('clean', function () {
-    return del('dist/**/*');
+// ��������
+gulp.task("font", function() {
+    return gulp
+        .src("src/fonts/**/*{.eot,svg,ttf,woff,woff2}")
+        .pipe(cached("fonts"))
+        .pipe(gulp.dest("dist/fonts"));
 });
 
-// build，关连执行全部编译任务
-gulp.task('build', ['sass', 'css', 'script', 'image'], function () {
-    gulp.start('html');
+// clean ��� dist Ŀ¼
+gulp.task("clean", function() {
+    return del("dist/**/*");
 });
 
-// default 默认任务，依赖清空任务
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+// build������ִ��ȫ����������
+gulp.task("build", ["sass", "css", "script", "image", "font"], function() {
+    gulp.start("html");
 });
 
-// watch 开启本地服务器并监听
-gulp.task('watch', function () {
+// default Ĭ�����������������
+gulp.task("default", ["clean"], function() {
+    gulp.start("build");
+});
+
+// watch ����ط�����������
+gulp.task("watch", function() {
     browserSync.init({
         server: {
-            baseDir: 'dist' // 在 dist 目录下启动本地服务器环境，自动启动默认浏览器
-        }
+            baseDir: "dist" // �� dist Ŀ¼������ط������������Զ���Ĭ�������
+        },
+        browser: "chrome"
     });
 
-    // 监控 SASS 文件，有变动则执行CSS注入
-    gulp.watch('src/sass/**/*.scss', ['styleReload']);
-    // 监控 CSS 文件，有变动则执行CSS注入
-    gulp.watch('src/css/**/*.css', ['styleReload']);
-    // 监控 js 文件，有变动则执行 script 任务
-    gulp.watch('src/js/**/*.js', ['script']);
-    // 监控图片文件，有变动则执行 image 任务
-    gulp.watch('src/img/**/*', ['image']);
-    // 监控 html 文件，有变动则执行 html 任务
-    gulp.watch('src/**/*.html', ['html']);
-    // 监控 dist 目录下除 css 目录以外的变动（如js，图片等），则自动刷新页面
-    gulp.watch(['dist/**/*', '!dist/css/**/*']).on('change', browserSync.reload);
-
+    // ��� SASS �ļ����б䶯��ִ��CSSע��
+    gulp.watch("src/sass/**/*.scss", ["styleReload"]);
+    // ��� CSS �ļ����б䶯��ִ��CSSע��
+    gulp.watch("src/css/**/*.css", ["styleReload"]);
+    // ��� js �ļ����б䶯��ִ�� script ����
+    gulp.watch("src/js/**/*.js", ["script"]);
+    // ���ͼƬ�ļ����б䶯��ִ�� image ����
+    gulp.watch("src/images/**/*", ["image"]);
+    // ��������ļ����б䶯��ִ�� font ����
+    gulp.watch("src/fonts/**/*", ["fonts"]);
+    // ��� html �ļ����б䶯��ִ�� html ����
+    gulp.watch("src/**/*.html", ["html"]);
+    // ��� dist Ŀ¼�³� css Ŀ¼����ı䶯����js��ͼƬ�ȣ������Զ�ˢ��ҳ��
+    gulp
+        .watch(["dist/**/*", "!dist/css/**/*"])
+        .on("change", browserSync.reload);
 });

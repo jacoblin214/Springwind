@@ -1,0 +1,100 @@
+.con-navbar {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background: #fff;
+    border-bottom: 0.1rem solid rgba(22, 22, 22, 0.2);
+}
+
+.nav {
+    height: 6rem;
+    .nav__logo {
+        float: left;
+        width: 6rem;
+        height: 6rem;
+        margin-left: 10rem;
+        .nav__logo-img {
+            height: inherit;
+            width: inherit;
+        }
+    }
+    .nav__links {
+        float: left; // width: 60rem;
+        height: 6rem;
+        line-height: 6rem;
+        text-align: center;
+        & > .nav__item {
+            float: left;
+            width: 10rem;
+            padding: 0 0;
+            transition: all 0.3s;
+            &:hover,
+            &:focus {
+                display: block;
+                .sub-menu__item {
+                    display: block;
+                }
+            }
+        }
+        .nav__item-link {
+            color: #6e6e6e;
+            text-decoration: none;
+            padding: 0.5rem 0.2rem;
+            &:hover {
+                border-bottom: 0.2rem solid #43d2c3;
+            }
+        }
+    }
+    .nav__action-buttons {
+        float: right;
+        line-height: 6rem;
+        margin-right: 6rem;
+        color: #545454;
+        .action-box {
+            float: left;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+        .search-box__label {
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .search-box__input {
+            height: 2rem;
+            width: 16rem;
+            vertical-align: 0.2rem;
+            outline: none;
+        }
+        .language-switch__btn {
+            border-radius: 10px;
+            padding: 0 5px;
+            height: 20px;
+            font-size: 14px;
+            &.is-actived {
+                color: #fff;
+                background-color: #c0c0c0;
+            }
+        }
+    }
+    /* sub-menu */
+    .sub-menu {
+        display: block;
+        transition: all 0.3s;
+        background: #fff;
+        .sub-menu__item {
+            display: none;
+            height: 4rem;
+            width: 10rem;
+            line-height: 4rem;
+            &:hover {
+                background: rgba(22, 22, 22, 0.1);
+            }
+        }
+        .sub-menu__link {
+            color: #6e6e6e;
+            &:hover {
+                color: #3bb6aa;
+            }
+        }
+    }
+}
