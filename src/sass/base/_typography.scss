@@ -1,15 +1,93 @@
-/* common style */
+@import "../abstracts/variables.scss";
 
 .inner-center {
-    width: 120rem;
-    margin-left: auto;
-    margin-right: auto;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clearfix::after {
-    content: ".";
-    visibility: hidden;
-    height: 0;
-    display: block;
-    clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  display: block;
+  clear: both;
 }
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
+}
+
+.underline::after {
+  display: block;
+}
+
+/* ================== section ====================== */
+.section {
+  text-align: center;
+  &__heading {
+    display: inline-block;
+    margin: 54px 0 40px 0;
+    font-size: 36px;
+    color: hsl(0, 0%, 20%);
+    &-underline {
+      border-bottom: 2px solid $main-theme-color;
+    }
+  }
+  &__subHeading {
+    font-size: 24px;
+    color: #323232;
+  } // .underline::after {
+  //   content: "";
+  //   display: block;
+  //   height: 2px;
+  //   width: 4em;
+  //   margin: 0 auto;
+  //   background: $main-theme-color;
+  // }
+  background: #fff;
+  &:nth-child(2n) {
+    background: hsl(0, 0%, 96%);
+  }
+}
+
+// Headings
+
+// Paragraphs
+
+// Unordered & ordered lists
+
+// Definition lists
+
+// Blockquotes
+
+// code & pre
+
+// Links
+
+a {
+  &:link {
+    color: hsl(174, 53%, 54%);
+    text-decoration: none;
+  }
+  &:visited {
+    color: hsl(174, 53%, 54%);
+  }
+  &:hover {
+    color: $main-theme-color;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $main-theme-color;
+  }
+}
+
+// h1 {
+//   font-size: 36px;
+// }

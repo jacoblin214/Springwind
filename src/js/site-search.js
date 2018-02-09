@@ -1,12 +1,12 @@
 //分页
 $("#page").paging({
-    pageNo: 1,
-    totalPage: 9,
-    totalSize: 300,
-    callback: function (num) {
-        // alert(num)
-    }
-})
+  pageNo: 1,
+  totalPage: 9,
+  totalSize: 300,
+  callback: function(num) {
+    // alert(num)
+  }
+});
 
 /*
 // 模拟ajax数据

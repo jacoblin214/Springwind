@@ -1,248 +1,248 @@
 .page-wrap {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .page-wrap .page-title {
-    text-align: center;
+  text-align: center;
 }
 
 .page-wrap .page-title h2 {
-    display: inline-block;
-    padding: 10px 0;
-    border-bottom: 2px solid #4ac8bb;
-    font-size: 30px;
-    font-weight: normal;
-    text-align: center;
-    color: #4c4c4c;
+  display: inline-block;
+  padding: 10px 0;
+  border-bottom: 2px solid #4ac8bb;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  color: #4c4c4c;
 }
 
 /* comment */
 .comments-container {
-    margin-top: 30px;
-    font-size: 24px;
-    color: #4d4d4d;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #4d4d4d;
 }
 
 .comments-container .comments-head p {
-    margin-bottom: 30px;
-    font-size: 16px;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .comments-container .comments-list .comment-item {
-    margin-top: 48px;
-    line-height: 36px;
+  margin-top: 48px;
+  line-height: 36px;
 }
 
 .comments-list .comment-item .title {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: normal;
-    color: #b2b2b2;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #b2b2b2;
 }
 
 .comments-list .comment-item .content {
-    text-indent: 32px;
-    font-size: 16px;
-    line-height: 24px;
+  text-indent: 32px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* comment-textarea */
 
 .comment-section {
-    margin-top: 90px;
+  margin-top: 90px;
 }
 
 .comment-section .user-box {
-    overflow: hidden;
-    margin-top: 44px;
+  overflow: hidden;
+  margin-top: 44px;
 }
 
 .comment-section .user-box .user-groups {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
 }
 
 .comment-section .user-box .user-item {
-    display: inline-block;
-    position: relative;
-    margin-top: 44px;
-    vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  margin-top: 44px;
+  vertical-align: middle;
 }
 
 .user-label-wrap {
-    display: none;
-    text-indent: -9999px;
+  display: none;
+  text-indent: -9999px;
 }
 
 .user-box .user-item .user-label {
-    display: inline-block;
-    padding-right: 10px;
+  display: inline-block;
+  padding-right: 10px;
 
-    font-size: 20px;
-    color: #4c4c4c;
-    text-align: right;
-    vertical-align: middle;
-    cursor: pointer;
+  font-size: 20px;
+  color: #4c4c4c;
+  text-align: right;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .user-box .user-item {
-    position: relative;
+  position: relative;
 }
 
 .user-box .user-item .user-content {
-    height: 26px;
-    padding-left: 10px;
-    font-size: 16px;
-    line-height: 26px;
-    background: #fff;
-    vertical-align: middle;
-    outline: none;
+  height: 26px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  background: #fff;
+  vertical-align: middle;
+  outline: none;
 }
 
 .user-box .user-item .feedback {
-    position: absolute;
-    left: 140px;
-    font-size: 14px;
+  position: absolute;
+  left: 140px;
+  font-size: 14px;
 }
 
 .user-box .user-item .feedback.success {
-    color: lightgreen;
+  color: lightgreen;
 }
 
 .user-box .user-item .feedback.error {
-    color: #fd2121;
+  color: #fd2121;
 }
 
 .user-box .user-item #name {
-    width: 228px;
+  width: 228px;
 }
 
 .user-box .user-item #sex {
-    position: relative;
-    width: 113px;
-    height: 26px;
-    font-size: 18px;
-    color: #4c4c4c;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  position: relative;
+  width: 113px;
+  height: 26px;
+  font-size: 18px;
+  color: #4c4c4c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* triangle */
 
 .user-box .user-groups .user-item.sex::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 14px;
-    left: 224px;
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #4d4d4d;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 224px;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #4d4d4d;
 }
 
 .user-box .user-item .tips {
-    font-size: 20px;
-    color: #fe4747;
-    vertical-align: -2px;
+  font-size: 20px;
+  color: #fe4747;
+  vertical-align: -2px;
 }
 
 .user-box .user-item .tips.optional {
-    color: #8b8b8b;
+  color: #8b8b8b;
 }
 
 .user-box .user-item .tips.optional .comments {
-    color: #fe4747;
+  color: #fe4747;
 }
 
 .origin {
-    margin-top: 178px;
-    font-size: 16px;
+  margin-top: 178px;
+  font-size: 16px;
 }
 
 /* user-text */
 
 .user-text {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #4d4d4d;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #4d4d4d;
 }
 
 .user-text .user-item + .user-item {
-    margin-top: 46px;
+  margin-top: 46px;
 }
 
 .user-text .user-item .user-label-wrap {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .user-text .user-item .user-label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .user-text .user-item .user-content {
-    width: 100%;
-    height: 242px;
-    padding: 10px;
-    font-size: 16px;
-    outline: none;
-    resize: none;
-    /*不支持IE*/
+  width: 100%;
+  height: 242px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  /*不支持IE*/
 }
 
 /* btn-groups */
 
 .btn-groups {
-    margin-top: 32px;
-    text-align: right;
+  margin-top: 32px;
+  text-align: right;
 }
 
 .opera-btn {
-    display: inline-block;
-    width: 100px;
-    height: 52px;
-    border-radius: 2px;
-    border: 0;
+  display: inline-block;
+  width: 100px;
+  height: 52px;
+  border-radius: 2px;
+  border: 0;
 
-    font-size: 24px;
-    line-height: 52px;
-    text-align: center;
-    color: #fff;
-    background: #5cd6c7;
-    cursor: pointer;
-    outline: none;
+  font-size: 24px;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  background: #5cd6c7;
+  cursor: pointer;
+  outline: none;
 }
 
 .opera-btn:hover {
-    color: #f0f0f0;
-    background: #72f1e1;
+  color: #f0f0f0;
+  background: #72f1e1;
 }
 
 .btn-groups .opera-btn + .opera-btn {
-    margin-left: 32px;
+  margin-left: 32px;
 }
 
 /* comment-input */
 
 .textarea-wrap {
-    position: relative;
+  position: relative;
 }
 
 .textarea-wrap .user-tips {
-    position: absolute;
-    right: 32px;
-    bottom: 32px;
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
 
-    font-size: 14px;
-    color: #b2b2b2;
+  font-size: 14px;
+  color: #b2b2b2;
 }
 
 .textarea-wrap .user-tips .word-remain {
-    color: #6ed9ce;
+  color: #6ed9ce;
 }

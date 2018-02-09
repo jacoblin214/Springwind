@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> @@include('common/head.html')
+    <title>活动报名</title>
+</head>
+
+<body>
+    @@include('common/nav.html')
+    <div class="page-wrap">
+        <ul class="breadcrumb">
+            <span>当前位置：</span>
+            <li>
+                <a href="###">首页</a>
+            </li>
+            <li class="active">活动报名</li>
+        </ul>
+        <form action="">
+            <section class="activity-section">
+                <div class="page-title">
+                    <h2>活动报名</h2>
+                </div>
+                <div class="user-box" action="">
+                    <div class="user-groups">
+                        <div class="user-item">
+                            <label for="name" class="user-label">姓名:</label>
+                            <input type="text" id="name" class="user-content" required>
+                            <span class="tips">（必填）</span>
+                            <p class="feedback success">该用户昵称可用</p>
+                        </div>
+                        <div class="user-item">
+                            <label for="age" class="user-label">年龄:</label>
+                            <input type="text" id="age" class="user-content" required>
+                            <span class="tips">（必填）</span>
+                        </div>
+                        <div class="user-item">
+                            <label for="phone" class="user-label">联系电话:</label>
+                            <input type="text" id="phone" class="user-content">
+                            <span class="tips optional">（选填）</span>
+                            <p class="feedback error">电话格式不正确</p>
+
+                        </div>
+                        <div class="user-item">
+                            <label for="email" class="user-label">邮箱:</label>
+                            <input type="text" id="email" class="user-content">
+                            <span class="tips optional">（选填）</span>
+                            <p class="feedback success">该邮箱可用</p>
+
+                        </div>
+                        <div class="user-item">
+                            <label for="qq" class="user-label">QQ:</label>
+                            <input type="text" id="qq" class="user-content">
+                            <span class="tips optional">（选填）</span>
+                            <p class="feedback success">该用户昵称可用</p>
+                        </div>
+
+                    </div>
+                    <div class="user-groups">
+                        <div class="user-item sex">
+                            <label for="sex" class="user-label">性别:</label>
+                            <select id="sex" class="user-content" required>
+                                <option value="" disabled selected>请选择</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                            <span class="tips">（必填）</span>
+                        </div>
+                        <div class="user-item">
+                            <label for="occupation" class="user-label">职业:</label>
+                            <input type="text" id="occupation" class="user-content">
+                            <span class="tips optional">（选填）</span>
+
+                        </div>
+                        <div class="user-item">
+                            <label for="msn" class="user-label">MSN:</label>
+                            <input type="text" id="msn" class="user-content">
+                            <span class="tips optional">（选填）</span>
+                        </div>
+                        <div class="user-item">
+                            <label for="address" class="user-label">地址:</label>
+                            <input type="text" id="address" class="user-content">
+                            <span class="tips optional">（选填）</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="user-text">
+                    <div class="user-item">
+                        <div class="user-label-wrap">
+                            <label for="character" class="user-label">个人介绍:</label>
+                        </div>
+                        <div class="textarea-wrap">
+                            <textarea class="user-content" name="text" id="character" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="btn-groups">
+                <input id="submit" class="opera-btn" type="submit" value="提交">
+                <input id="reset" class="opera-btn" type="reset" value="重置">
+                <a id="close" class="opera-btn" href="###?entry">关闭</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script type="text/javascript" src="../js/registration-activity.js"></script>
+    @@include('common/footer.html')
+</body>
+
+</html>

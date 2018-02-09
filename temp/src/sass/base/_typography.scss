@@ -1,0 +1,54 @@
+/* ============= global style ================ */
+
+.inner-center {
+  width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
+}
+
+.underline::after {
+  display: block;
+}
+
+// Headings
+
+// Paragraphs
+
+// Unordered & ordered lists
+
+// Definition lists
+
+// Blockquotes
+
+// code & pre
+
+// Links
+
+a {
+  &:link {
+  }
+  &:visited {
+  }
+  &:hover {
+  }
+  &:active {
+  }
+}

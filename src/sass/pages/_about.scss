@@ -1,0 +1,132 @@
+/* ==================== page-about ======================= */
+#about {
+  /* ============ about-banner ================= */
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; // center for the large screen
+    margin: 0 auto;
+    height: 808px;
+    text-align: center;
+    background: url(../images/about/group_9@3x.png) no-repeat;
+    background-size: cover;
+    &__desc {
+      margin-top: 606px;
+      color: hsl(0, 0%, 100%);
+    }
+    &__title--primary {
+      font-size: 40px;
+      // font-family: STXinwei; // Simulate text stroke
+      // text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
+    }
+    &__title--secondary {
+      font-size: 22px;
+    }
+  }
+}
+
+/* ====================== section-about ====================== */
+.about-container {
+  .about__title {
+    margin-bottom: 60px;
+    color: hsl(0, 0%, 20%);
+  }
+  .about__detail {
+    margin-bottom: 100px;
+    font-size: 20px;
+    line-height: 40px;
+    color: hsl(0, 0%, 20%);
+  }
+  .about__information {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+    &-item {
+      width: 150px;
+      text-align: center;
+    }
+    &-icon {
+      width: 150px;
+      height: 150px;
+    }
+    &-title {
+      margin-top: 30px;
+    }
+  }
+}
+
+/* ====================== section-project======================== */
+.section-project {
+  color: hsl(0, 0%, 20%);
+  background: url(../images/about/banner.png) no-repeat !important;
+  background-size: cover;
+}
+
+.project-container {
+  .project {
+    &__desc-item {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__view-btn {
+      height: 46px;
+      width: 175px;
+      margin: 58px 0 138px 0;
+
+      font-size: 20px;
+      text-align: center;
+      color: hsl(0, 0%, 100%);
+    }
+  }
+}
+
+/* ============================== section-call-board================================= */
+.call-board-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.call-board {
+  // width: 600px;
+  padding: 0 50px;
+  margin-bottom: 100px;
+
+  &__item {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  &__title {
+    display: inline-block;
+    overflow: hidden;
+
+    width: 300px;
+    font-size: 16px;
+    color: hsl(0, 0%, 20%);
+    vertical-align: middle;
+  }
+  &__btn {
+    display: inline-block;
+    height: 20px;
+    width: 70px;
+    border: 1px solid hsl(174, 53%, 54%);
+    border-radius: 10px;
+    margin-left: 10px;
+
+    font-size: 10px;
+    vertical-align: middle;
+    text-align: center;
+    color: hsl(174, 53%, 54%);
+
+    &:link {
+      color: hsl(174, 53%, 54%);
+    }
+  }
+  &__link {
+    display: block;
+    text-align: left;
+  }
+}

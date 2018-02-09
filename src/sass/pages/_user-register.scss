@@ -1,131 +1,130 @@
 @font-face {
-    font-family: "iconfont";
-    src: url('iconfont.eot?t=1512196568127');
-    /* IE9*/
-    src: url('iconfont.eot?t=1512196568127#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'), url('iconfont.ttf?t=1512196568127') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('iconfont.svg?t=1512196568127#iconfont') format('svg');
-    /* iOS 4.1- */
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1512196568127");
+  /* IE9*/
+  src: url("iconfont.eot?t=1512196568127#iefix") format("embedded-opentype"),
+    url("data:application/x-font-woff;charset=utf-8;base64,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")
+      format("woff"),
+    url("iconfont.ttf?t=1512196568127") format("truetype"),
+    url("iconfont.svg?t=1512196568127#iconfont") format("svg");
+  /* iOS 4.1- */
 }
 
 .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-eye:before {
-    content: "\e68c";
+  content: "\e68c";
 }
 
 .icon-eye1:before {
-    content: "\e6cf";
+  content: "\e6cf";
 }
 
-
 .page-wrap {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .page-wrap .page-title {
-    text-align: center;
+  text-align: center;
 }
 
 .page-wrap .page-title h2 {
-    display: inline-block;
-    padding: 10px 0;
-    border-bottom: 2px solid #4ac8bb;
-    font-size: 30px;
-    font-weight: normal;
-    text-align: center;
-    color: #4c4c4c;
+  display: inline-block;
+  padding: 10px 0;
+  border-bottom: 2px solid #4ac8bb;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  color: #4c4c4c;
 }
-
-
 
 /* resume-section */
 
 .register-section {
-    margin-top: 108px;
+  margin-top: 108px;
 }
 
 .register-section .user-box {
-    overflow: hidden;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    margin-top: 44px;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  margin-top: 44px;
 }
 
 .register-section .user-box .user-groups {
-    margin-right: 80px;
+  margin-right: 80px;
 }
 
 .register-section .user-box .user-item {
-    position: relative;
-    margin-top: 44px;
+  position: relative;
+  margin-top: 44px;
 }
 
 .user-box .user-item .user-label {
-    display: inline-block;
-    width: 120px;
-    padding-right: 10px;
-    font-size: 26px;
-    color: #4c4c4c;
-    text-align: right;
-    vertical-align: middle;
-    cursor: pointer;
+  display: inline-block;
+  width: 120px;
+  padding-right: 10px;
+  font-size: 26px;
+  color: #4c4c4c;
+  text-align: right;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .user-box .user-item {
-    position: relative;
+  position: relative;
 }
 
 .user-box .user-item .user-content {
-    height: 26px;
-    padding-left: 5px;
-    
-    font-size: 16px;
-    line-height: 26px;
-    background: #fff;
-    vertical-align: middle;
-    outline: none;
+  height: 26px;
+  padding-left: 5px;
+
+  font-size: 16px;
+  line-height: 26px;
+  background: #fff;
+  vertical-align: middle;
+  outline: none;
 }
 
 .user-box .user-item .feedback {
-    position: absolute;
-    left: 140px;
+  position: absolute;
+  left: 140px;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .feedback.success {
-    color: lightgreen;
+  color: lightgreen;
 }
 
 .feedback.error {
-    color: #fd2121;
+  color: #fd2121;
 }
 
 .user-box .user-item #name {
-    width: 228px;
+  width: 228px;
 }
 
 /* password show and hide */
 .show-hide {
-    position: absolute;
-    right: 222px;
-    bottom: 5px;
-    cursor: pointer;
+  position: absolute;
+  right: 222px;
+  bottom: 5px;
+  cursor: pointer;
 }
 
 .show-hide .iconfont {
-    display: hidden;
-    font-size: 20px;
-    color: #4d4d4d;
+  display: hidden;
+  font-size: 20px;
+  color: #4d4d4d;
 }
 
 /* .show-hide .show {
@@ -137,46 +136,45 @@
 } */
 
 .user-box .user-item #dateBirth {
-    width: 136px;
+  width: 136px;
 }
 
 .user-box .user-item #sex {
-    position: relative;
-    width: 113px;
-    height: 26px;
-    font-size: 18px;
-    color: #4c4c4c;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  position: relative;
+  width: 113px;
+  height: 26px;
+  font-size: 18px;
+  color: #4c4c4c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-
 
 /* triangle */
 
 .user-box .user-groups .user-item.sex::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 14px;
-    left: 224px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 224px;
 
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #4d4d4d;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #4d4d4d;
 }
 
 .user-box .user-item .tips {
-    font-size: 20px;
-    color: #fe4747;
-    vertical-align: -2px;
+  font-size: 20px;
+  color: #fe4747;
+  vertical-align: -2px;
 }
 
 .user-box .user-item .tips.optional {
-    color: #8b8b8b;
+  color: #8b8b8b;
 }
 
 .user-box #username,
@@ -186,165 +184,164 @@
 .user-box #qq,
 .user-box #birthplace,
 .user-box #msn {
-    width: 228px;
+  width: 228px;
 }
 
 .user-box #age {
-    width: 68px;
+  width: 68px;
 }
 
 .user-box #name {
-    width: 138px;
+  width: 138px;
 }
 
 .user-box #occupation {
-    width: 128px;
+  width: 128px;
 }
 
 .user-box #address {
-    width: 358px;
+  width: 358px;
 }
 
 /* user-text */
 
 .user-text {
-    margin-top: 50px;
-    font-size: 26px;
-    color: #4d4d4d;
+  margin-top: 50px;
+  font-size: 26px;
+  color: #4d4d4d;
 }
 
-.user-text .user-item+.user-item {
-    margin-top: 46px;
+.user-text .user-item + .user-item {
+  margin-top: 46px;
 }
 
 .user-text .user-item .user-label-wrap {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .user-text .user-item .user-label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .user-text .user-item .user-content {
-    width: 100%;
-    height: 242px;
-    padding: 10px;
-    font-size: 16px;
-    outline: none;
-    resize: none;
-    /*不支持IE*/
+  width: 100%;
+  height: 242px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  /*不支持IE*/
 }
 
 /* security question */
 .security-question {
-    overflow: hidden;
-    margin-top: 90px; 
-    text-align: center;
+  overflow: hidden;
+  margin-top: 90px;
+  text-align: center;
 }
 
 .security-question .question-container {
-    font-size: 16px;
-    color: #4c4c4c;
+  font-size: 16px;
+  color: #4c4c4c;
 }
 
 .security-question .user-groups {
-    margin-top: 46px;
+  margin-top: 46px;
 }
 
 .security-question .user-groups .user-item {
-    position: relative;
+  position: relative;
 }
 
 .security-question .user-item .feedback {
-    position: absolute;
-    right: 320px;
-    top: 18px;
-    font-size: 14px;
+  position: absolute;
+  right: 320px;
+  top: 18px;
+  font-size: 14px;
 }
 
 .security-question .user-groups .user-label {
-    display: inline-block;
-    width: 60px;
+  display: inline-block;
+  width: 60px;
 }
 
 .security-question .user-groups .user-content {
-    width: 360px;
-    height: 40px;
-    margin-top: 6px;
-    padding-left: 5px;
+  width: 360px;
+  height: 40px;
+  margin-top: 6px;
+  padding-left: 5px;
 
-    font-size: 16px;
-    color: #4c4c4c;
-    -moz-outline: none;
-    outline: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  font-size: 16px;
+  color: #4c4c4c;
+  -moz-outline: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
-
 
 /* btn-groups */
 
 .btn-groups {
-    margin-top: 130px;
-    text-align: center;
+  margin-top: 130px;
+  text-align: center;
 }
 
 .btn-groups .opera-btn {
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-    border-radius: 2px;
-    border: 0;
-    font-size: 26px;
-    line-height: 50px;
-    text-align: center;
-    color: #fff;
-    background: #5cd6c7;
-    cursor: pointer;
-    outline: none;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  border-radius: 2px;
+  border: 0;
+  font-size: 26px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #5cd6c7;
+  cursor: pointer;
+  outline: none;
 }
 
 .btn-groups .opera-btn:hover {
-    color: #f0f0f0;
-    background: #72f1e1;
+  color: #f0f0f0;
+  background: #72f1e1;
 }
 
-.btn-groups .opera-btn+.opera-btn {
-    margin-left: 32px;
+.btn-groups .opera-btn + .opera-btn {
+  margin-left: 32px;
 }
 
 .textarea-wrap {
-    position: relative;
+  position: relative;
 }
 
 .scroll-btn-wrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
 }
 
 .scroll-btn-wrap .scroll-btn {
-    position: absolute;
-    right: 2px;
-    display: block;
-    width: 0;
-    height: 0;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    cursor: pointer;
+  position: absolute;
+  right: 2px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  cursor: pointer;
 }
 
 .scroll-btn-wrap .scroll-btn.down {
-    bottom: 0;
-    border-bottom: 5px solid transparent;
-    border-top: 11px solid #4d4d4d;
+  bottom: 0;
+  border-bottom: 5px solid transparent;
+  border-top: 11px solid #4d4d4d;
 }
 
 .scroll-btn-wrap .scroll-btn.up {
-    top: -4px;
-    border-top: 5px solid transparent;
-    border-bottom: 11px solid #4d4d4d;
+  top: -4px;
+  border-top: 5px solid transparent;
+  border-bottom: 11px solid #4d4d4d;
 }

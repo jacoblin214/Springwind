@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收支明细</title>
+    @@include('common/head.html')
+</head>
+
+<body>
+    @@include('common/nav.html')
+
+    <div class="page-wrap w">
+        <ul class="breadcrumb">
+            <span>当前位置：</span>
+            <li>
+                <a href="###">首页</a>
+            </li>
+            <li class="active">收支明细</li>
+        </ul>
+        <div class="page-title">
+            <h2>收支明细</h2>
+        </div>
+        <div class="page-body">
+            <table class="inout-table">
+                <thead class="inout-head">
+                    <tr>
+                        <th class="inout-cell cell-date">
+                            日期
+                            <span id="sort-date" class="date-icon">
+                                <i id="asc" class="date-icon-up  active"></i>
+                                <i id="desc" class="date-icon-down"></i>
+                            </span>
+                        </th>
+                        <th class="inout-cell cell-resource">名字|单位</th>
+                        <th class="inout-cell cell-type">类型</th>
+                        <th class="inout-cell cell-unit">（元）（件）（台）（项）</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr class="inout-item">
+                        <td class="js-date">2016/01/30</td>
+                        <td>晨农文化</td>
+                        <td>人民币</td>
+                        <td class="cell-unit">5000</td>
+                    </tr>
+                    <tr class="inout-item">
+                        <td class="js-date">2016/03/04</td>
+                        <td>张冬梅</td>
+                        <td>人民币</td>
+                        <td class="cell-unit">10, 000</td>
+                    </tr>
+                    <tr class="inout-item">
+                        <td class="js-date">2016/03/04</td>
+                        <td>隋双戈、刘吉华</td>
+                        <td>电子产品</td>
+                        <td class="cell-unit">1</td>
+                    </tr>
+                    <tr class="inout-item">
+                        <td class="js-date">2016/05</td>
+                        <td>
+                            深圳竹海心理咨询有限公司
+                            <br> 常州金色百灵心理咨询有限公司
+                        </td>
+                        <td>优惠政策</td>
+                        <td class="cell-unit">10</td>
+                    </tr>
+                    <tr class="inout-item">
+                        <td class="js-date">2016/05</td>
+                        <td>深圳市亚太典当行有限公司</td>
+                        <td>礼品</td>
+                        <td class="cell-unit">90</td>
+                    </tr>
+                    <tr class="inout-item">
+                        <td class="js-date">2016/05</td>
+                        <td>助可一丰摄影设计公司</td>
+                        <td>资助</td>
+                        <td class="cell-unit">免费设计宣传资料</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="page" class="pagination"></div>
+        <div class="page-footer">
+            <a href="###" class="speak">我要发言>></a>
+            <p class="resource">来源：春风网——心理创伤援助公益平台</p>
+        </div>
+    </div>
+    <script src="../js/income-pay-detail.js"></script>
+    @@include('common/footer.html')
+</body>
+
+</html>

@@ -1,77 +1,78 @@
+/* ================== footer ===================== */
 #site-footer {
-    /* link */
-    a {
-        color: #fff;
-        &:link {
-            color: #fff;
-        }
-        &:hover {
-            color: darken($color: #fff, $amount: 20);
-        }
+  /* link */
+  a {
+    color: #fff;
+    &:link {
+      color: #fff;
     }
+    &:hover {
+      color: darken($color: #fff, $amount: 20);
+    }
+  }
 }
 
 .footer {
-    min-height: 50rem;
-    // margin-top: 10rem;
+  min-height: 50rem;
+  // margin-top: 10rem;
 
-    color: #fff;
-    background-color: #545454;
-    text-align: center;
+  color: #fff;
+  background-color: #545454;
+  text-align: center;
 }
 
 .footer-nav {
-    padding-top: 10rem;
-    width: 74rem;
-    height: 38rem;
-    margin: 0 auto;
-    border-bottom: 0.2rem solid #b1b1b1;
+  padding-top: 10rem;
+  width: 74rem;
+  height: 38rem;
+  margin: 0 auto;
+  border-bottom: 0.2rem solid #b1b1b1;
 
-    .footer-nav__item {
-        float: left;
-        width: 20%;
-        &:not(:last-child) {
-            // margin-right: 8rem;
-        }
+  .footer-nav__item {
+    float: left;
+    width: 20%;
+    &:not(:last-child) {
+      // margin-right: 8rem;
     }
+  }
 
-    .footer-nav__title {
-        display: block;
-        margin-bottom: 2rem;
-    }
+  .footer-nav__title {
+    display: block;
+    margin-bottom: 2rem;
+  }
 
-    .footer-menu {
-        .footer-menu__item {
-            line-height: 4rem;
-        }
+  .footer-menu {
+    .footer-menu__item {
+      line-height: 4rem;
     }
+  }
 }
 
 .footer-copyright {
-    margin-top: 3.5rem;
-    letter-spacing: 0.3rem;
-    font-size: 1.4rem;
-    color: white;
+  margin-top: 3.5rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.4rem;
+  color: white;
 }
 
 #toTop {
-    display: none;
-    z-index: 999999;
-    position: fixed;
-    display: block;
-    right: 10px;
-    bottom: 100px;
-    border-radius: 2px;
-    padding: 10px;
-    background: rgba(22, 22, 22, 0.6);
-    cursor: pointer;
+  display: none;
+  z-index: 999999;
+  position: fixed;
+  display: block;
+  right: 10px;
+  bottom: 100px;
+  border-radius: 2px;
+  padding: 10px;
+  background: rgba(22, 22, 22, 0.6);
+  cursor: pointer;
 }
 
 #toTop a {
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-    font-size: 26px;
-    text-indent: -999em;
-    color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  text-indent: -999em;
+  color: rgba(255, 255, 255, 0.2);
 }
