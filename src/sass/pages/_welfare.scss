@@ -1,0 +1,167 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-05 3:08:16 pm 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-07 9:40:30 am 
+ */
+/* ==================== page-school======================= */
+
+#academy {
+  /* ============ school-banner ================= */
+  .banner {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; // center for the large screen
+    margin: 0 auto;
+    height: 808px;
+    text-align: center;
+    background: url(../images/public-action/s-top.png) no-repeat;
+    background-size: cover;
+    &__desc {
+      margin-top: 606px;
+      color: hsl(0, 0%, 100%);
+    }
+    &__title--primary {
+      font-size: 40px; // font-family: STXinwei; // Simulate text stroke
+      // text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
+    }
+  }
+}
+
+/* =======================  section-course =========================== */
+
+/* ==================== page-welfare  ======================= */
+
+#welfare {
+  /* ============ welfare-banner ================= */
+  .banner {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%; // center for the large screen
+    margin: 0 auto;
+    height: 808px;
+    text-align: center;
+    background: url(../images/about/group_9@3x.png) no-repeat;
+    background-size: cover;
+    &__desc {
+      margin-top: 606px;
+      color: hsl(0, 0%, 100%);
+    }
+    &__title--primary {
+      font-size: 40px; // font-family: STXinwei; // Simulate text stroke
+      // text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
+    }
+  }
+}
+
+/* ==================== section-welfare ======================== */
+
+.welfare-container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .welfare {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    font-size: 0;
+
+    &__img {
+      height: 480px;
+      max-width: 100%;
+    }
+    &__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      height: 60px;
+      font-size: 24px;
+      line-height: 60px;
+      color: hsl(0, 0%, 80%);
+      background: hsla(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* ============================= section-join =============================== */
+.section-join {
+  background-color: hsl(0, 0%, 100%) !important;
+}
+
+.join-container {
+  margin-bottom: 130px;
+  .join {
+    width: calc(1170px / 3);
+    height: 350px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &__icon {
+      display: inline-block;
+      height: 52px;
+      width: 58px;
+      margin: 50px 0;
+    }
+    &__title {
+      color: hsl(0, 0%, 50%);
+      font-size: 20px;
+    }
+    &__btn {
+      display: inline-block;
+
+      height: 40px;
+      width: 118px;
+      border: 1px solid hsl(0, 0%, 50%);
+      border-radius: 4px;
+      margin-top: 50px;
+
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 40px;
+      color: #333;
+    }
+  }
+}
+
+/* ==================== section-hands ======================== */
+
+.hands-container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  .hands {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    font-size: 0;
+    &__img {
+      height: 400px;
+      max-width: 100%;
+    }
+    &__btn {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+
+      height: 60px;
+      width: 200px;
+      margin: auto;
+      border: 1px solid hsl(0, 0%, 100%);
+      border-radius: 10px;
+
+      font-size: 24px;
+      line-height: 60px;
+      color: hsl(0, 0%, 100%);
+      cursor: pointer;
+    }
+  }
+}

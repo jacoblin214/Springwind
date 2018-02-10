@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-01-24 17:28:42 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-02-09 17:41:06
+ * @Last Modified time: 2018-02-10 17:50:56
  */
 @import "abstracts/mixins.scss";
 
@@ -20,11 +20,15 @@
 
 @import "components/modal.scss";
 @import "components/breadcrumb.scss";
+@import "components/map.scss";
 
 @import "pages/home.scss";
 @import "pages/about.scss";
 @import "pages/service-channel.scss";
 @import "pages/school.scss";
+@import "pages/welfare.scss";
+@import "pages/donate.scss";
+@import "pages/resources.scss";
 @import "pages/case-success.scss";
 @import "pages/case-detail.scss";
 @import "pages/comment-display.scss";
@@ -32,10 +36,8 @@
 @import "pages/donor.scss";
 @import "pages/expert.scss";
 @import "pages/find-password.scss";
-@import "pages/give.scss";
 @import "pages/income-pay-detail.scss";
 @import "pages/job-opportunities.scss";
-@import "pages/join.scss";
 @import "pages/love-files.scss";
 @import "pages/password-reset.scss";
 @import "pages/registration-activity.scss";
