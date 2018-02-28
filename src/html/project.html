@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('common/head.html')
+  <title>专业合作</title>
+</head>
+
+<body>
+  <!-- Start=导航 -->
+  @@include('common/main-nav.html')
+  <!-- End=导航 -->
+
+  <div class="article">
+
+    <!-- Start=article__header -->
+    <div class="article__header inner-center">
+      <h1 class="article__title--primary">科普</h1>
+      <p class="article__title--secondary">春风学堂 / 专题</p>
+    </div>
+    <!-- End=article__header -->
+
+    <!-- Start=article__body -->
+    <div class="article__body">
+
+      <!-- start=专题 -->
+      <div class="article-section section-topic">
+        <div class="topic-container inner-center">
+          <ul class="topic-list">
+            <li class="topic-item clearfix">
+              <div class="topic-item__media left">
+                <img class="topic-item__img" src="../images/cases/group_4.png">
+              </div>
+              <div class="topic-item__content right">
+                <h4 class="topic-item__title">[图文]震灾心理援助专辑</h4>
+                <p class="topic-item__para">清明节到来，和家人小孩陪同老人踏青游玩、接触大自然也不失为度过清明的一种好方法。淡化哀伤的同时，我们关注的也关爱一些很难面对清明节的群体。本专题将为大众带来清明节的心理呵护知识，提供哀伤恢复、及援助自杀者亲友的支持资源，期望在清明节更多支持。</p>
+                <button class="topic-item__btn btn">了解详情</button>
+              </div>
+            </li>
+            <li class="topic-item clearfix">
+              <div class="topic-item__media left">
+                <img class="topic-item__img" src="../images/cases/group_8.png">
+              </div>
+              <div class="topic-item__content right">
+                <h4 class="topic-item__title">[图文]震灾心理援助专辑</h4>
+                <p class="topic-item__para">清明节到来，和家人小孩陪同老人踏青游玩、接触大自然也不失为度过清明的一种好方法。淡化哀伤的同时，我们关注的也关爱一些很难面对清明节的群体。本专题将为大众带来清明节的心理呵护知识，提供哀伤恢复、及援助自杀者亲友的支持资源，期望在清明节更多支持。</p>
+                <button class="topic-item__btn btn">了解详情</button>
+              </div>
+            </li>
+            <li class="topic-item clearfix">
+              <div class="topic-item__media left">
+                <img class="topic-item__img" src="../images/cases/group_12.png">
+              </div>
+              <div class="topic-item__content right">
+                <h4 class="topic-item__title">[图文]震灾心理援助专辑</h4>
+                <p class="topic-item__para">清明节到来，和家人小孩陪同老人踏青游玩、接触大自然也不失为度过清明的一种好方法。淡化哀伤的同时，我们关注的也关爱一些很难面对清明节的群体。本专题将为大众带来清明节的心理呵护知识，提供哀伤恢复、及援助自杀者亲友的支持资源，期望在清明节更多支持。</p>
+                <button class="topic-item__btn btn">了解详情</button>
+              </div>
+            </li>
+            <li class="topic-item clearfix">
+              <div class="topic-item__media left">
+                <img class="topic-item__img" src="../images/cases/group_16.png">
+              </div>
+              <div class="topic-item__content right">
+                <h4 class="topic-item__title">[图文]震灾心理援助专辑</h4>
+                <p class="topic-item__para">清明节到来，和家人小孩陪同老人踏青游玩、接触大自然也不失为度过清明的一种好方法。淡化哀伤的同时，我们关注的也关爱一些很难面对清明节的群体。本专题将为大众带来清明节的心理呵护知识，提供哀伤恢复、及援助自杀者亲友的支持资源，期望在清明节更多支持。</p>
+                <button class="topic-item__btn btn">了解详情</button>
+              </div>
+            </li>
+            <li class="topic-item clearfix">
+              <div class="topic-item__media left">
+                <img class="topic-item__img" src="../images/cases/group_20.png">
+              </div>
+              <div class="topic-item__content right">
+                <h4 class="topic-item__title">[图文]震灾心理援助专辑</h4>
+                <p class="topic-item__para">清明节到来，和家人小孩陪同老人踏青游玩、接触大自然也不失为度过清明的一种好方法。淡化哀伤的同时，我们关注的也关爱一些很难面对清明节的群体。本专题将为大众带来清明节的心理呵护知识，提供哀伤恢复、及援助自杀者亲友的支持资源，期望在清明节更多支持。</p>
+                <button class="topic-item__btn btn">了解详情</button>
+              </div>
+            </li>
+          </ul>
+
+          <div class="topic-item__navigation clearfix">
+            <div id="page" class="pagination right">
+              <!-- <a href="/?page=1"></a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End=专题 -->
+
+  </div>
+  <!-- End=article__body -->
+
+  <!-- Start=article__footer -->
+  <div class="article-footer"></div>
+  <!-- End=article__footer -->
+
+  </div>
+
+  <!-- Start=页脚 -->
+  @@include('common/footer.html')
+  <script src="../js/resource-detail.js"></script>
+  <script>
+    $("#page").paging({
+      pageNo: 1,
+      totalPage: 9,
+      totalSize: 300,
+      callback: function (num) {
+        // alert(num)
+      }
+    });
+  </script>
+  <!-- End=页脚 -->
+
+</body>
+
+</html>

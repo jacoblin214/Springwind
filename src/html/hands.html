@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('common/head.html')
+  <title>专业合作</title>
+</head>
+
+<body>
+  <!-- Start=导航 -->
+  @@include('common/main-nav.html')
+  <!-- End=导航 -->
+
+  <div class="article">
+
+    <!-- Start=article__header -->
+    <div class="article__header inner-center">
+      <h1 class="article__title--primary">心理</h1>
+      <p class="article__title--secondary">公益行动 / 专业合作</p>
+    </div>
+    <!-- End=article__header -->
+
+    <!-- Start=article__body -->
+    <div class="article__body">
+
+      <!-- start=专业合作 -->
+      <div class="article-section section-hands">
+        <div class="hands-container inner-center">
+
+          <div class="hands-item">
+            <div class="hands-item__head">
+              <p class="hands-item__title">上海--心理援助</p>
+              <p class="hands-item__time">2009-2-16 22:43:00</p>
+            </div>
+
+            <div class="hands-item__body">
+              <p class="hands-item__para">
+                上海12320公共卫生公益电话
+                <br> 心理援助专线服务时间为：每天早上8点至晚上10点
+                <br> （说明：市民如有需求，可直接拨打12320，按5键进入心理援助专线，受理电话以咨询为主，内容涉及就医指
+                <br> 导、慢性病防治、妇幼保健、传染病防治、预防接种、心理咨询等各类问题。）
+              </p>
+              <p class="hands-item__para">
+                上海交通大学医学院附属新华医院
+                <br> 临床心理科、儿童与青少年保健科
+                <br> 负责人：张劲松（主任医师）
+                <br> 门诊需预约，详见新华医院网站：
+                <a href="http://www.xinhuamed.com.cn">http://www.xinhuamed.com.cn</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="hands-item">
+            <div class="hands-item__head">
+              <p class="hands-item__title">北京--心理援助</p>
+              <p class="hands-item__time">2009-2-16 22:43:00</p>
+            </div>
+
+            <div class="hands-item__body">
+              <p class="hands-item__para">
+                北京12320公共卫生公益电话
+                <br> 心理援助专线服务时间为：每天早上8点至晚上10点
+                <br> （说明：市民如有需求，可直接拨打12320，按5键进入心理援助专线，受理电话以咨询为主，内容涉及就医指
+                <br> 导、慢性病防治、妇幼保健、传染病防治、预防接种、心理咨询等各类问题。）
+              </p>
+              <p class="hands-item__para">
+                北京交通大学医学院附属新华医院
+                <br> 临床心理科、儿童与青少年保健科
+                <br> 负责人：张劲松（主任医师）
+                <br> 门诊需预约，详见新华医院网站：
+                <a href="http://www.xinhuamed.com.cn">http://www.xinhuamed.com.cn</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="hands-item__navigation right">
+            <div id="page" class="pagination clearfix">
+              <!-- <a href="/?page=1"></a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End=专业合作 -->
+
+  </div>
+  <!-- End=article__body -->
+
+  <!-- Start=article__footer -->
+  <div class="article-footer"></div>
+  <!-- End=article__footer -->
+
+  </div>
+
+  <!-- Start=页脚 -->
+  @@include('common/footer.html')
+  <script src="../js/resource-detail.js"></script>
+  <script>
+    $("#page").paging({
+      pageNo: 1,
+      totalPage: 9,
+      totalSize: 300,
+      callback: function (num) {
+        // alert(num)
+      }
+    });
+  </script>
+  <!-- End=页脚 -->
+
+</body>
+
+</html>

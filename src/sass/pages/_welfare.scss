@@ -142,6 +142,9 @@
     width: 25%;
     text-align: center;
     font-size: 0;
+    a {
+      color: hsl(0, 0%, 100%);
+    }
     &__img {
       height: 400px;
       max-width: 100%;
