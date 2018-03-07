@@ -1,0 +1,66 @@
+.article__header-banner {
+  // height: 140px;
+  width: 100%;
+  background: #fff url(../images/expert-advice/page_1@3x.jpg);
+  background-size: cover;
+}
+
+/* ==================== page-annoucement ======================= */
+
+/* ====================== section-annoucement ========================== */
+
+.section-annoucement {
+  background: #fff;
+
+  .annoucement-detail {
+    overflow: hidden;
+
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+
+    &__title {
+      overflow: hidden;
+      margin-top: 30px;
+      color: #4ac8bb;
+    }
+    &__subtitle {
+      overflow: hidden;
+      margin-top: 20px;
+      color: #4ac8bb;
+    }
+    &__para {
+      text-align: justify;
+    }
+    &__contact {
+      margin-top: 40px;
+      &-item {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+    &__course-item {
+      margin-top: 30px;
+    }
+    &__img {
+      display: inline-block;
+      font-size: 0;
+      width: 600px;
+      height: 400px;
+      margin: 20px 0;
+    }
+    &__btn {
+      margin-top: 30px;
+    }
+    &__section-title {
+      margin: 40px 0 40px 0;
+      text-align: left;
+      color: #4ac8bb;
+    }
+  }
+}
+
+.article-footer {
+  text-align: right;
+  margin-bottom: 20px;
+}

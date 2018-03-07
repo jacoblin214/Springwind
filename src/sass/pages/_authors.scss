@@ -1,0 +1,93 @@
+/*
+ * @Author: Jecyu 
+ * @Date: 2018-02-10 15:06:55 
+ * @Last Modified by: Jecyu
+ * @Last Modified time: 2018-02-28 17:27:43
+ */
+
+/* ======================= article ========================== */
+
+.article {
+  background-color: #f5f5f5;
+  /* ============ article-header ================= */
+  &__header {
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+  }
+  &__title--primary {
+    margin-top: 30px;
+    font-size: 28px;
+    color: #40d1c3;
+  }
+  &__title--secondary {
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: #333;
+  }
+  &__body {
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+
+/* ==================== page-authors ======================= */
+
+/* ====================== section-authors  ========================== */
+
+.section-authors {
+  margin-bottom: 50px;
+  background: hsl(0, 0%, 100%);
+}
+
+.authors-container {
+  .authors-list {
+    padding-top: 30px;
+  }
+  .authors-item {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    padding: 28px 50px;
+    cursor: pointer;
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+    }
+    font-size: 18px;
+    color: #323232;
+    background: #f5f5f5;
+    &__img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      font-size: 0;
+    }
+    &__content {
+      overflow: hidden;
+      height: 300px;
+      width: 860px;
+      border-bottom: 1px solid #888;
+    }
+    &__info {
+      width: 700px;
+    }
+    &__title {
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+      font-size: 26px;
+      text-align: left;
+    }
+    &__para {
+      font-size: 18px;
+      text-align: justify;
+    }
+    &__btn {
+      margin-top: 30px;
+      color: #fff;
+    }
+    &__navigation {
+      // margin-top: 20px;
+    }
+  }
+}

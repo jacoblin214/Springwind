@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-01-24 17:28:42 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-02-27 11:41:57
+ * @Last Modified time: 2018-03-07 11:50:54
  */
 @import "abstracts/mixins.scss";
 
@@ -18,33 +18,40 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 
-@import "components/modal.scss";
 @import "components/breadcrumb.scss";
 @import "components/map.scss";
 
 @import "pages/home.scss";
 @import "pages/about.scss";
-@import "pages/service-channel.scss";
-@import "pages/school.scss";
-@import "pages/welfare.scss";
-@import "pages/donate.scss";
-@import "pages/resources.scss";
-@import "pages/hands.scss";
+@import "pages/authors.scss";
+@import "pages/author-detail.scss";
+@import "pages/annoucement.scss";
+
 @import "pages/case-success.scss";
 @import "pages/case-detail.scss";
 @import "pages/comment-display.scss";
 @import "pages/contact.scss";
+
+@import "pages/service-channel.scss";
+@import "pages/school.scss";
+@import "pages/welfare.scss";
+@import "pages/donate.scss";
 @import "pages/donor.scss";
 @import "pages/expert.scss";
 @import "pages/find-password.scss";
+@import "pages/resources.scss";
+@import "pages/hands.scss";
+@import "pages/honor-wall.scss";
+@import "pages/love-files.scss";
 @import "pages/income-pay-detail.scss";
 @import "pages/job-opportunities.scss";
-@import "pages/love-files.scss";
 @import "pages/password-reset.scss";
 @import "pages/registration-activity.scss";
 @import "pages/reset-success.scss";
 @import "pages/site-search.scss";
 @import "pages/topic.scss";
+@import "pages/project.scss";
+@import "pages/project-detail.scss";
 @import "pages/user-login.scss";
 @import "pages/user-register.scss";
 @import "pages/user-submission.scss";

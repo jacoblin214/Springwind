@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('common/head.html')
+  <title>专业合作</title>
+</head>
+
+<body>
+  <!-- Start=导航 -->
+  @@include('common/main-nav.html')
+  <!-- End=导航 -->
+
+  <div class="article">
+
+    <!-- Start=article__header -->
+    <div class="article__header inner-center">
+      <h1 class="article__title--primary">专栏作者</h1>
+      <p class="article__title--secondary">春风学堂 / </p>
+    </div>
+    <!-- End=article__header -->
+
+    <!-- Start=article__body -->
+    <div class="article__body">
+
+      <!-- start=专栏作者 -->
+      <div class="article-section section-authors">
+        <div class="authors-container inner-center">
+          <ul class="authors-list">
+            <li class="authors-item clearfix">
+              <div class="authors-item__info left">
+                <h4 class="authors-item__title">隋双戈</h4>
+                <p class="authors-item__para">北京晨帆心理咨询中心创始人之一，多家电视媒体特邀嘉宾。长期致力于亲子教育、家庭教育、亲子关系辅导，婚姻咨询和系统家庭治疗的实践和研究工作。</p>
+                <a href="###" class="authors-item__btn btn">了解更多</a>
+              </div>
+              <img class="authors-item__img right" src="../images/index/expert-01.png">
+            </li>
+            <li class="authors-item clearfix">
+              <div class="authors-item__info left">
+                <h4 class="authors-item__title">隋双戈</h4>
+                <p class="authors-item__para">北京晨帆心理咨询中心创始人之一，多家电视媒体特邀嘉宾。长期致力于亲子教育、家庭教育、亲子关系辅导，婚姻咨询和系统家庭治疗的实践和研究工作。</p>
+                <a href="###" class="authors-item__btn btn">了解更多</a>
+              </div>
+              <img class="authors-item__img right" src="../images/index//expert-02.png">
+            </li>
+          </ul>
+
+          <div class="authors-item__navigation clearfix">
+            <div id="page" class="pagination right">
+              <!-- <a href="/?page=1"></a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End=专栏作者 -->
+
+  </div>
+  <!-- End=article__body -->
+
+  <!-- Start=article__footer -->
+  <div class="article-footer"></div>
+  <!-- End=article__footer -->
+
+  </div>
+
+  <!-- Start=页脚 -->
+  @@include('common/footer.html')
+  <script src="../js/resource-detail.js"></script>
+  <script>
+    $("#page").paging({
+      pageNo: 1,
+      totalPage: 9,
+      totalSize: 300,
+      callback: function (num) {
+        // alert(num)
+      }
+    });
+  </script>
+  <!-- End=页脚 -->
+
+</body>
+
+</html>

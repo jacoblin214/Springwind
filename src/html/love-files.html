@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('common/head.html')
+  <title>专业合作</title>
+</head>
+
+<body>
+  <!-- Start=导航 -->
+  @@include('common/main-nav.html')
+  <!-- End=导航 -->
+
+  <div class="article">
+
+    <!-- Start=article__header -->
+    <div class="article__header inner-center">
+      <h1 class="article__title--primary">爱心档案</h1>
+      <p class="article__title--secondary">乐捐 / </p>
+    </div>
+    <!-- End=article__header -->
+
+    <!-- Start=article__body -->
+    <div class="article__body">
+
+      <!-- start=专栏作者 -->
+      <div class="article-section section-loveFiles">
+        <div class="loveFiles-container inner-center">
+          <ul class="loveFiles-list">
+            <li class="loveFiles-item">2017年12月29日，爱心人士陈君先生为“儿童性安全教育绘本、动画制作”公益项目捐赠人民币5384元。</li>
+            <li class="loveFiles-item">2016.01.30，转入晨农文化捐赠款人民币5,000。</li>
+            <li class="loveFiles-item">2016.03.04，张冬梅转隋学费人民币10,000。</li>
+            <li class="loveFiles-item">2016.03.29，活动现场收到捐赠人民币118.30。</li>
+            <li class="loveFiles-item">2016.07.30，幸福密码捐赠人民币120.00。</li>
+            <li class="loveFiles-item">2016.05，王思青个人捐赠人民币3,216.00。</li>
+            <li class="loveFiles-item">22016.09.08，传承基金会捐赠99公益日春风项目人民币20,000。</li>
+            <li class="loveFiles-item">2015.1.31，深圳爱心人士匿名捐助深圳市首届心理应激干预大会暨深圳市春风应激干预服务中心年会人民币10000元整。</li>
+            <li class="loveFiles-item">2015.1.29，深圳市竹海心理咨询有限公司 赞助深圳市首届心理应激干预大会暨深圳市春风应激干预服务中心年会人民币1000元整。</li>
+          </ul>
+
+          <div class="loveFiles-item__navigation clearfix">
+            <div id="page" class="pagination right">
+              <!-- <a href="/?page=1"></a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End=专栏作者 -->
+
+  </div>
+  <!-- End=article__body -->
+
+  <!-- Start=article__footer -->
+  <div class="article-footer"></div>
+  <!-- End=article__footer -->
+
+  </div>
+
+  <!-- Start=页脚 -->
+  @@include('common/footer.html')
+  <script src="../js/resource-detail.js"></script>
+  <script>
+    $("#page").paging({
+      pageNo: 1,
+      totalPage: 9,
+      totalSize: 300,
+      callback: function (num) {
+        // alert(num)
+      }
+    });
+  </script>
+  <!-- End=页脚 -->
+
+</body>
+
+</html>

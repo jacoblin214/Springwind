@@ -1,0 +1,50 @@
+.article__header-banner {
+  height: 140px;
+  width: 100%;
+  background: #fff url(../images/expert-advice/page_1@3x.jpg);
+  background-size: cover;
+}
+
+/* ==================== page-author-detail ======================= */
+
+/* ====================== section-author-detail ========================== */
+
+.author-detail {
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 2;
+  &__title {
+    overflow: hidden;
+    margin: 60px 0 20px 0;
+    text-align: left;
+    color: #4ac8bb;
+  }
+  &__contact {
+    margin-top: 40px;
+    &-item {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  &__course-item {
+    margin-top: 30px;
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+  &__btn {
+    margin-top: 30px;
+  }
+  &__section-title {
+    margin: 40px 0 40px 0;
+    text-align: left;
+    color: #4ac8bb;
+  }
+}
+
+.article-footer {
+  text-align: right;
+  margin-bottom: 20px;
+}

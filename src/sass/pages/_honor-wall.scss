@@ -1,0 +1,62 @@
+/* ==================== page-honor ======================= */
+
+/* ====================== section-honors  ========================== */
+
+.section-honors {
+  margin: 50px;
+  background: hsl(0, 0%, 100%);
+
+  &__title {
+    margin: 40px 0;
+    color: #4ac8bb;
+  }
+  .honors-container {
+    // BFC
+    overflow: hidden;
+    .honors-item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #323232;
+      background: #fff;
+    }
+  }
+}
+
+/* ====================== section-honorWall  ========================== */
+
+.section-honorWall {
+  overflow: hidden;
+  background: #f5f5f5;
+
+  &__title {
+    margin: 80px 0 30px 0;
+    font-size: 28px;
+    color: #4ac8bb;
+  }
+  .honorWall-container {
+    // BFC
+    margin-bottom: 50px;
+
+    .honorWall-item {
+      display: block;
+      position: relative;
+
+      height: 300px;
+      margin-bottom: 20px;
+
+      font-size: 18px;
+      text-align: center;
+      color: #323232;
+      background: #fff;
+
+      &__img {
+        display: inline-block;
+        margin-top: 50px;
+        height: 200px;
+        width: 300px;
+      }
+    }
+  }
+}

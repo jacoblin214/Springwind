@@ -260,19 +260,21 @@
 
 /* ======================= swiper ============================= */
 
+.swiper-container {
+}
 .swiper-wrapper {
   position: relative;
 }
 
 .swiper-button-prev {
-  margin-top: 20px;
+  // margin-top: 20px;
   transform: translateY(-50%);
   left: 0;
   background-image: url(../images/index/left.png);
 }
 
 .swiper-button-next {
-  margin-top: 20px;
+  // margin-top: 20px;
   transform: translateY(-50%);
   right: 0;
   background-image: url(../images/index/right.png);

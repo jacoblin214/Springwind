@@ -13,7 +13,7 @@
   &__header {
     position: relative;
     overflow: hidden;
-    height: 100px;
+    min-height: 100px;
   }
   &__title--primary {
     margin-top: 30px;

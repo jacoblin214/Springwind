@@ -8,15 +8,15 @@ $breakpoints: (
   "huge": (min-width: 1200px)
 );
 @mixin respond-to($breakpoints) {
-  @if $breakpoints=="small" {
+  @if $breakpoints== "small" {
     @media (min-width: 767px) {
       @content;
     }
-  } @else if $breakpoints=="medium" {
+  } @else if $breakpoints== "medium" {
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $breakpoints=="large" {
+  } @else if $breakpoints== "large" {
     @media (min-width: 1200px) {
       @content;
     }

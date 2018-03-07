@@ -1,10 +1,13 @@
-// 逻辑
-// 1.点击职位，进行二级联动显示详细对应详细信息
-// 2.表单字段验证（公有js文件）
-// 3.textarea自定义滚动条
+/*
+ * @Author: Jecyu 
+ * @Date: 2018-03-06 17:39:13 
+ * @Last Modified by: Jecyu
+ * @Last Modified time: 2018-03-07 14:58:29
+ */
+
 "use strict";
 
-var page = {
+var cur_page = {
   data: {
     jobs: [
       {
@@ -38,7 +41,7 @@ var page = {
     this.bindEvent();
   },
   onload: function() {
-    this.renderHtml(this.data.jobs);
+    this.prepareDeliver();
   },
   // 绑定事件
   bindEvent: function() {
@@ -46,73 +49,92 @@ var page = {
     var _this = this;
 
     // job切换点击事件
-    $(".job-item").click(function(e) {
-      // 缓存当前单击对象
-      var $this = $(this);
-      var jobId = $this.attr("data-job");
+    $(".job-item__summary").click(function(e) {
+      $(this)
+        .next()
+        .toggle(500);
+    });
 
-      if ($this.hasClass("active")) {
-        return;
-      } else {
-        $this
-          .addClass("active")
-          .siblings(".job-item")
-          .removeClass("active");
-        // console.log($('#' + jobId));
-        $("#" + jobId)
-          .show()
-          .siblings(".job-content")
-          .hide();
+    // 分页
+    $("#page").paging({
+      pageNo: 1,
+      totalPage: 9,
+      totalSize: 300,
+      callback: function(num) {
+        // alert(num)
       }
     });
   },
-
-  renderHtml: function(array) {
+  /**
+   * 投递的准备
+   */
+  prepareDeliver: function() {
     var _this = this;
-    var listHtml = "";
+    var deliver_modal = $("#deliver-modal")[0];
+    // 这里要传入 DOM 对象，非 jQuery对象
+    var layer = createFloatLayer(deliver_modal);
 
-    for (var i = 0, len = array.length; i < len; i++) {
-      (listHtml += '<li class="job-item" data-job="job-' + array[i].id + '">'),
-        (listHtml += '<div class="job-info">');
-      listHtml += '<h3 class="title">' + array[i].title + "</h3>";
-      listHtml +=
-        '<p class="text">月薪：' +
-        '<span class="salary">' +
-        array[i].money +
-        "</span>" +
-        "</p>";
-      listHtml += "</div>";
-      listHtml += '<div class="job-deliver">';
-      listHtml += '<span class="release-time">' + array[i].date + "发布</span>";
-      listHtml += '<a class="deliver-btn" href="###">投递</a>';
-      listHtml += "</div>";
-      listHtml += "</li>";
-    }
+    // 登录状态
+    var is_login = false;
+    var has_resumed = false;
+    // 取得浮出层标题
+    var $deliver_modal_title = $(".deliver-modal__title .deliver-modal__link");
+    // 取得浮出层底部
+    var $deliver_modal_footer = $(".js-deliver-modal__footer");
+    // 声明按钮的模板
+    var btn_html = "";
 
-    $(".job-list").html(listHtml);
-  },
-  // 表单验证
-  valia: function() {},
-  // 提交表单
-  submit: function() {
-    var _this = this;
-    var formData = {
-      name: $.trim($("#name").val()),
-      datebirth: $.trim($("#dateBirth").val()),
-      age: $.trim($("#age").val()),
-      sex: $.trim($("#sex").val()),
-      school: $.trim($("#school").val()),
-      education: $.trim($("#education").val()),
-      profession: $.trim($("#profession").val()),
-      dateAdmission: $.trim($("#dateAdmission").val()),
-      email: $.trim($("#email").val()),
-      qq: $.trim($("#qq").val()),
-      address: $.trim($("#address").val()),
-      msn: $.trim($("#msn").val()),
-      character: $.trim($("#character").val()),
-      resume: $.trim($("#resume").val())
-    };
+    $(".job-item__btn").click(function(event) {
+      event.stopPropagation();
+
+      // 弹出框
+      // 1.未登录
+      if (is_login === false) {
+        // 设置标题
+        $deliver_modal_title
+          .text("请登录后再投递，还没有账号，立即注册")
+          .attr("href", "###");
+        btn_html =
+          '<a href="###" class="btn deliver-modal__btn">登录</a>' +
+          '<a href="###" class="btn deliver-modal__btn">注册' +
+          "</a>";
+        $deliver_modal_footer.html(btn_html);
+      }
+      // 2.已登录
+      if (is_login === true) {
+        if (has_resumed) {
+          // 2.1 有简历
+          // 设置标题
+          $deliver_modal_title
+            .text("您正在向“活动策划”职位投递简历")
+            .attr("href", "###");
+          btn_html =
+            '<a href="###" class="btn deliver-modal__btn">登录</a>' +
+            '<a href="###" class="btn deliver-modal__btn">注册' +
+            "</a>";
+          $deliver_modal_footer.html(btn_html);
+        } else {
+          // 2.2 无简历
+          // 设置标题
+          $deliver_modal_title
+            .text("您还没有可投递的简历，立即编辑")
+            .attr("href", "###");
+          btn_html =
+            '<a href="###" class="btn deliver-modal__btn">查看简历</a>' +
+            '<a href="###" class="btn deliver-modal__btn">投递' +
+            "</a>";
+          $deliver_modal_footer.html(btn_html);
+          // 设置按钮
+          btn_html =
+            '<a href="###" class="btn deliver-modal__btn">编辑简历</a>';
+          $deliver_modal_footer.html(btn_html);
+        }
+      }
+      layer.show();
+    });
   }
 };
 
-$(document).ready(page.init());
+$(document).ready(function() {
+  cur_page.init();
+});

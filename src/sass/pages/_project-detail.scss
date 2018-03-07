@@ -1,0 +1,41 @@
+/* ==================== page-project-detail ======================= */
+
+/* ====================== section-project-detail ========================== */
+
+.section-projectInfo {
+  margin: 50px;
+  background: hsl(0, 0%, 100%);
+
+  .projectInfo {
+    font-size: 18px;
+    text-align: center;
+    &__title {
+      margin: 40px 0 20px 0;
+      text-align: center;
+      color: #4ac8bb;
+    }
+    &__img {
+      height: 600px;
+      width: 100%;
+    }
+    &__para {
+      margin-top: 20px;
+      text-align: justify;
+    }
+    // BFC
+    overflow: hidden;
+    .projectInfo-item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #323232;
+      background: #fff;
+    }
+  }
+}
+
+.article-footer {
+  text-align: right;
+  margin-bottom: 20px;
+}

@@ -207,6 +207,27 @@ const page = {
         $orgNav.css("visibility", "visible");
       }
     });
+  },
+  /**
+   * 兼容的事件方法
+   */
+  addEvent: function(ele, event, handler) {
+    if (ele.addEventListener) {
+      ele.addEventListener(event, handler, false);
+    } else if (ele.attachEvent) {
+      ele.attachEvent("on" + event, handler);
+    } else {
+      ele["on" + event] = handler;
+    }
+  },
+  removeEvent: function(ele, event, handler) {
+    if (ele.removeEventListener) {
+      ele.removeEventListener(event, handler, false);
+    } else if (ele.detachEvent) {
+      ele.detachEvent("on" + event, handler);
+    } else {
+      ele["on" + event] = null;
+    }
   }
 };
 
