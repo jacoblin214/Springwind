@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('common/head.html')
+  <title>修改邮箱账号</title>
+</head>
+
+<body>
+  <!-- Start=导航 -->
+  @@include('common/main-nav.html')
+  <!-- End=导航 -->
+
+  <div class="article">
+
+    <!-- Start=article__header -->
+    <div class="article__header">
+      <div class="article__header-banner"></div>
+    </div>
+    <!-- End=article__header -->
+
+    <!-- Start=article__body -->
+    <div class="article__body">
+      <div class="modify inner-center">
+        <h1 class="modify__title">修改邮箱账号</h1>
+        <h2 class="modify__subtitle">MODIFY EMAIL ACCOUNT</h2>
+
+        <form action="">
+          <div class="modify-item">
+            <p class="modify-item__wrapper">
+              <input type="text" id="username" class="modify-item__input" required placeholder="新邮箱 (New email)">
+            </p>
+            <p class="modify-item__wrapper">
+              <input type="text" id="username" class="modify-item__input" required placeholder="请输入验证码">
+              <span class="modify-item__send-ValidateCode">发送验证邮件
+                <br>
+                <small>Send validation mail</small>
+              </span>
+            </p>
+
+          </div>
+          <div class="user-btn__groups">
+            <input id="submit" class="btn user-btn" type="submit" value="确认(Confirm)">
+            <a class="btn user-btn" href="###?entry">返回(Return)</a>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  </div>
+  <!-- End=article__body -->
+
+  <!-- Start=article__footer -->
+  <div class="article-footer">
+  </div>
+  <!-- End=article__footer -->
+  </div>
+
+  <!-- Start=页脚 -->
+  @@include('common/footer.html')
+  <!-- End=页脚 -->
+
+</body>
+
+</html>

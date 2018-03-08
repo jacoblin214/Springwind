@@ -7,10 +7,81 @@
 
 const page = {
   init: function() {
+    this.onload();
+    this.bindEvent();
+  },
+  onload: function() {
+    // 初始化，密码不可见
+    $(".show-hide").addClass("show icon-eye");
+  },
+  bindEvent: function() {
+    this.prepareLogin();
     this.switchLanguage();
     this.setBackTotop("#2cb5a7", "#fff");
     this.setBodyMarginTop();
     this.backToTop();
+
+    // 密码显示隐藏点击事件
+    var isVisible = false;
+    $(".show-hide").click(function(e) {
+      // 缓存当前单击对象
+      var $this = $(this);
+
+      if (isVisible) {
+        $(".show-hide")
+          .removeClass("hide icon-eye1")
+          .addClass("show icon-eye");
+        $("#password").attr("type", "password");
+        isVisible = false;
+      } else {
+        $(".show-hide")
+          .removeClass("icon-eye")
+          .addClass("icon-eye1");
+        $("#password").attr("type", "text");
+        isVisible = true;
+      }
+    });
+
+    // 当点击提交时，自动把密码隐藏
+    $('form input[type="submit"]').on("click", function() {
+      $(".show-hide")
+        .removeClass("icon-eye1")
+        .addClass("icon-eye");
+      $("#password").attr("type", "password");
+    });
+  },
+  prepareLogin: function() {
+    var _this = this;
+    var login_modal = $("#login_modal")[0];
+    // 这里要传入 DOM 对象，非 jQuery对象
+    var layer = createFloatLayer(login_modal);
+
+    // 登录状态
+    var is_login = false;
+    var has_resumed = false;
+    // 取得浮出层标题
+    var $deliver_modal_title = $(".deliver-modal__title .deliver-modal__link");
+    // 取得浮出层底部
+    var $deliver_modal_footer = $(".js-deliver-modal__footer");
+    // 声明按钮的模板
+    var btn_html = "";
+
+    // 1.未登录
+    if (is_login === false) {
+      $(".js-login-btn").click(function loginModal(event) {
+        event.stopPropagation();
+        layer.show();
+      });
+      $("#login_modal")
+        .find(".close")
+        .click(function() {
+          layer.hide();
+        });
+    }
+    // 2.已登录，点击则进入会员中心
+    if (is_login === true) {
+      window.location.href = "member-center.html";
+    }
   },
   /**
    * 语言切换

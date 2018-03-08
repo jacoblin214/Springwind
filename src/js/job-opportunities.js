@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-03-06 17:39:13 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-03-07 14:58:29
+ * @Last Modified time: 2018-03-08 17:52:41
  */
 
 "use strict";
@@ -95,10 +95,23 @@ var cur_page = {
           .text("请登录后再投递，还没有账号，立即注册")
           .attr("href", "###");
         btn_html =
-          '<a href="###" class="btn deliver-modal__btn">登录</a>' +
-          '<a href="###" class="btn deliver-modal__btn">注册' +
+          '<a href="###" class="btn deliver-modal__btn " id="goLogin">登录</a>' +
+          '<a href="user-register.html" class="btn deliver-modal__btn">注册' +
           "</a>";
         $deliver_modal_footer.html(btn_html);
+
+        // 绑定登录按钮事件
+        $("#goLogin").click(function() {
+          layer.hide();
+          var login_layer = createFloatLayer(login_modal);
+          login_layer.show();
+
+          $("#login_modal")
+            .find(".close")
+            .click(function() {
+              login_layer.hide();
+            });
+        });
       }
       // 2.已登录
       if (is_login === true) {
@@ -109,9 +122,8 @@ var cur_page = {
             .text("您正在向“活动策划”职位投递简历")
             .attr("href", "###");
           btn_html =
-            '<a href="###" class="btn deliver-modal__btn">登录</a>' +
-            '<a href="###" class="btn deliver-modal__btn">注册' +
-            "</a>";
+            '<a href="###" class="btn deliver-modal__btn">编辑简历</a>';
+
           $deliver_modal_footer.html(btn_html);
         } else {
           // 2.2 无简历
@@ -123,10 +135,6 @@ var cur_page = {
             '<a href="###" class="btn deliver-modal__btn">查看简历</a>' +
             '<a href="###" class="btn deliver-modal__btn">投递' +
             "</a>";
-          $deliver_modal_footer.html(btn_html);
-          // 设置按钮
-          btn_html =
-            '<a href="###" class="btn deliver-modal__btn">编辑简历</a>';
           $deliver_modal_footer.html(btn_html);
         }
       }

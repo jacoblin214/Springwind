@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-02-27 10:30:10 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-02-27 11:12:05
+ * @Last Modified time: 2018-03-08 11:31:36
  */
 
 /**
@@ -28,6 +28,7 @@ function changeTab(tabNav, tabConentID, bannerUrl) {
   // 显示对应的 tab-content
   $("#" + tabConentID)
     .show()
+
     .siblings()
     .hide();
 
@@ -73,3 +74,14 @@ Router.route("/" + tab_4, function() {
 
 /* ============ 内部导航贴顶 ============== */
 page.stickUpInternalNav($(".tab2-nav"));
+
+/* ============= 上传文件 ================= */
+$(document).ready(function() {
+  $("#falseinput").click(function() {
+    $("#fileinput").click();
+  });
+});
+//  取得选择文件的信息，放置到指定的框中
+$("#fileinput").change(function() {
+  $(".user-item__upload-info").text($("#fileinput")[0].files[0].name);
+});

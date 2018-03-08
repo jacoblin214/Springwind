@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('common/head.html')
+    <title>活动报名</title>
+</head>
+
+<body>
+    <!-- Start=导航 -->
+    @@include('common/main-nav.html')
+    <!-- End=导航 -->
+
+    <div class="article">
+
+        <!-- Start=article__header -->
+        <div class="article__header inner-center">
+            <h1 class="article__title--primary">活动报名</h1>
+            <h2 class="article__title--secondary">公益行动 / 春风活动</h2>
+        </div>
+        <!-- End=article__header -->
+
+        <!-- Start=article__body -->
+        <div class="article__body">
+            <div class="register inner-center">
+
+                <form action="">
+                    <!-- Start=编辑简历 -->
+                    <div class="user-section clearfix">
+                        <h2 class="user-section__title">编辑简历(“
+                            <span class="user-item__tips">*</span>
+                            ”表示必填项)
+                        </h2>
+                        <div class="user-container left">
+                            <div class="user-groups">
+                                <div class="user-item">
+                                    <label for="user-input1" class="user-item__label user-item__label--inline">姓名：</label>
+                                    <input type="text" id="user-input1" class="user-item__input" required placeholder="请输入您的姓名">
+                                    <span class="user-item__tips">*</span>
+                                    <!-- <p class="user-item__feedback success">该用户昵称可用</p> -->
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input2" class="user-item__label user-item__label--inline">年龄：</label>
+                                    <input type="text" id="user-input2" class="user-item__input" required placeholder="请输入您的年龄">
+                                    <span class="user-item__tips">*</span>
+                                    <p class="user-item__feedback success"></p>
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input3" class="user-item__label user-item__label--inline">邮箱：</label>
+                                    <input type="text" id="user-input3" class="user-item__input" required placeholder="请输入您的邮箱">
+                                    <span class="user-item__tips">*</span>
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input4" class="user-item__label user-item__label--inline">Q&nbsp;Q：</label>
+                                    <input type="text" id="user-input4" class="user-item__input" required placeholder="请输入您的QQ">
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input5" class="user-item__label user-item__label--inline">电话：</label>
+                                    <input type="text" id="user-input5" class="user-item__input" required placeholder="请输入您的电话">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user-container left">
+                            <div class="user-groups">
+                                <div class="user-item clearfix">
+                                    <label class="user-item__label user-item__label--inline ">性别
+                                    </label>
+                                    <p class="left user-item__radio-wrapper">
+                                        <input type="radio" id="male" class="user-item__radio" required name="gender">
+                                        <label for="male" class="user-item__label user-item__label--inline  user-item__label user-item__label--inline-gender">先生</label>
+                                    </p>
+                                    <p class="left user-item__radio-wrapper">
+                                        <input id="female" type="radio" class="user-item__radio" required name="gender">
+                                        <label for="female" class="user-item__label user-item__label--inline user-item__label user-item__label--inline-gender">女士</label>
+                                    </p>
+                                    <span class="user-item__tips">*</span>
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input6" class="user-item__label user-item__label--inline">职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</label>
+                                    <input type="text" id="user-input6" class="user-item__input" placeholder="请输入您的职业">
+                                    <p class="user-item__feedback success"></p>
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input7" class="user-item__label user-item__label--inline">专业背景：</label>
+                                    <input type="text" id="user-input7" class="user-item__input" placeholder="请输入您的专业背景">
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input-8" class="user-item__label user-item__label--inline">微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：</label>
+                                    <input type="text" id="user-input-8" class="user-item__input" placeholder="请输入您的微信">
+                                </div>
+                                <div class="user-item">
+                                    <label for="user-input-9" class="user-item__label user-item__label--inline">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</label>
+                                    <input type="text" id="user-input-9" class="user-item__input" placeholder="请输入您的住址">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End=编辑简历 -->
+
+                    <!-- Start=个人介绍 -->
+                    <div class="user-section clearfix">
+                        <h2 class="user-section__title">个人介绍:
+                            <span class="user-item__tips">*</span>
+                        </h2>
+                        <textarea class="user-item__textarea" name="text" id="character" cols="30" rows="10"></textarea>
+                    </div>
+                    <!-- End=个人介绍 -->
+
+                    <!-- Start=参加理由 -->
+                    <div class="user-section clearfix">
+                        <h2 class="user-section__title">参加理由:
+                            <span class="user-item__tips">*</span>
+                        </h2>
+                        <textarea class="user-item__textarea" name="text" id="character" cols="30" rows="10"></textarea>
+                    </div>
+                    <!-- End=参加理由 -->
+            </div>
+
+            <div class="user-btn__groups">
+                <input id="submit" class="btn user-btn" type="submit" value="提交">
+                <input id="reset" class="btn user-btn" type="reset" value="重置">
+                <a class="btn user-btn" href="###?entry">返回</a>
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+    <!-- End=article__body -->
+
+    <!-- Start=article__footer -->
+    <div class="article-footer">
+    </div>
+    <!-- End=article__footer -->
+    </div>
+
+    <!-- Start=页脚 -->
+    @@include('common/footer.html')
+    <!-- End=页脚 -->
+
+</body>
+
+</html>

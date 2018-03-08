@@ -2,17 +2,17 @@
  * @Author: Jecyu 
  * @Date: 2018-02-10 15:06:55 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-02-27 10:54:45
+ * @Last Modified time: 2018-03-08 09:41:57
  */
 
 /* ======================= article ========================== */
+
 .article {
   background-color: #f5f5f5;
   /* ============ article-header ================= */
   &__header {
     position: relative;
     overflow: hidden;
-
     min-height: 100px;
   }
   &__title--primary {
@@ -20,12 +20,10 @@
     font-size: 28px;
     color: #40d1c3;
   }
-
   &__title--secondary {
     font-size: 16px;
     color: #333;
   }
-
   &__body {
     background-color: hsl(0, 0%, 100%);
   }
@@ -80,25 +78,36 @@
     display: inline-block;
     margin-right: 50px;
     background-color: #f5f5f5;
-
     &__item {
       position: relative;
-      height: 60px;
+      min-height: 60px;
       padding: 0 40px 0 20px;
-
+      font-size: 16px;
+      &.is-actived {
+        background: hsl(0, 0%, 80%);
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
       &.is-actived::after {
         content: ">";
+        display: inline;
         color: #323232;
       }
     }
     &__link {
-      line-height: 60px;
+      display: inline-block;
+      margin-top: 10px;
+      height: 50px;
+      vertical-align: middle;
       color: #323232;
     }
   }
   .tab2-content {
     color: #323232;
-
     &__head {
       display: block;
       width: 100%;

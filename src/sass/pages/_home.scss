@@ -164,12 +164,13 @@
   // min-height: 400px;
 }
 .joinus-container {
-  margin: 105px 0;
+  overflow: hidden;
 }
 
 .joinus {
   display: flex;
   justify-content: space-around;
+  margin: 105px 0;
 
   &__icon {
     width: 120px;

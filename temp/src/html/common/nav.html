@@ -98,4 +98,47 @@
     </div>
   </div>
 </div>
-<!-- @@include('modal.html') -->
+<!-- Start = login-modal -->
+<div class="modal" id="login_Modal" data-modal="login_Modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">登录春风账号</h4>
+        <button class="btn close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="user-item">
+            <label for="mod-username" class="user-label">
+              <i class="user-icon iconfont icon-login"></i>
+            </label>
+            <input type="text" id="mod-username" class="user-content" placeholder="用户名" required>
+            <span class="btn reset">&times;</span>
+          </div>
+          <div class="user-item">
+            <label for="mod-password" class="user-label">
+              <i class="user-icon iconfont icon-password"></i>
+            </label>
+            <input type="password" id="mod-password" class="user-content" placeholder="密码" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="footer-above clearfix">
+          <div class="select-container">
+            <input type="checkbox" id="check" checked class="user-content">
+            <label for="check" class="user-label">记住用户名</label>
+          </div>
+          <a id="loginBarrier" href="find-password.html" class="link">登录遇到问题</a>
+        </div>
+        <div class="footer-below">
+          <div class="btn-container">
+            <button class="btn opera-btn">登录</button>
+          </div>
+          <a href="user-register.html" class="link">立即注册</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End = login-modal -->
