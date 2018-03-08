@@ -45,7 +45,7 @@
       padding: 5px 2px;
 
       &:hover,
-      &--is-actived {
+      &.here {
         border-bottom: 2px solid #43d2c3;
       }
     }

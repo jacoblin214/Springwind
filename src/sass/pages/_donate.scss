@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-02-10 15:06:55 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-02-10 15:42:24
+ * @Last Modified time: 2018-03-08 18:25:07
  */
 
 /* ==================== page-donate======================= */
@@ -145,5 +145,22 @@
       line-height: 40px;
       color: #333;
     }
+  }
+}
+
+/* ============================= section-donate-way =============================== */
+.donate-way {
+  padding-top: 50px;
+  &__img {
+    height: 300px;
+    width: 250px;
+  }
+  &__text {
+    text-align: left;
+    margin-bottom: 30px;
+    color: hsl(0, 0%, 100%);
+  }
+  &__para:nth-child(2) {
+    margin-left: 30px;
   }
 }

@@ -49,6 +49,30 @@ const page = {
         .addClass("icon-eye");
       $("#password").attr("type", "password");
     });
+
+    // 服务通道
+    // 找到tab导航
+    var tab_nav_items = $(".tab-nav .tab-nav__item");
+    tab_nav_items.each(function() {
+      $(this).click(function(event) {
+        console.log("click");
+        // 取得里面的 data值
+        var tab_target = $(this).attr("data-tab");
+        console.log(tab_target);
+
+        $(this)
+          .addClass("tab-nav__item--is-actived")
+          .siblings()
+          .removeClass("tab-nav__item--is-actived");
+
+        $("#" + tab_target)
+          .show()
+          .siblings()
+          .hide();
+      });
+
+      /* ============== 定位到对应的section 部分=============== */
+    });
   },
   prepareLogin: function() {
     var _this = this;
@@ -183,12 +207,25 @@ const page = {
     });
   },
   /**
-   * TODO 当前板块突出显示、导航链接、banner
+   * 当前板块突出显示、导航链接、banner
    */
   highlightPage: function() {
     // 找到导航里所有的链接
     var $nav__links = $(".con-navbar a");
-    $nav__links.each(function name(params) {});
+    // 声明链接的 url 地址
+    var link_url;
+    $nav__links.each(function() {
+      // 取得当前链接里的 href 属性
+      link_url = $(this).getAttribute("href");
+      // 比较当前链接的 url 与当前页面的 url
+      if (window.location.href.indexOf(link_url) != -1) {
+        $(this).addClass("here");
+        // 取得链接里的文本
+        var linktext = $(this).lastChild.nodeValue.toLocaleLowerCase();
+        // 设置 body 的 id 属性
+        document.body.setAttribute("id", linktext);
+      }
+    });
   },
   /**
    * 获取导航栏的高度，给 body 设置一个上边距
