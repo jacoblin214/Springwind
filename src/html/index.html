@@ -6,7 +6,7 @@
   <title>首页</title>
 </head>
 
-<body id="index">
+<body>
   <!-- @@include('common/nav.html') -->
 
   <!-- Start=导航 -->
@@ -51,23 +51,29 @@
       <div class="annoucement-con">
         <div class="annoucement">
           <a href="annoucement.html">
-            <img class="annoucement__img" src="../images/index/g1.png" alt="">
+            <img class="annoucement__img grow" src="../images/index/g1.png" alt="">
             <div class="annoucement__desc">
               <p class="annoucement__text">春风吹散阴影，援助送来温暖</p>
             </div>
           </a>
         </div>
         <div class="annoucement">
-          <img class="annoucement__img" src="../images/index/group_14.png" alt="">
-          <div class="annoucement__desc">
-            <p class="annoucement__text">关于宝安沃尔玛超市伤人事件心理援助的通知</p>
-          </div>
+          <a href="annoucement.html">
+            <img class="annoucement__img grow" src="../images/index/group_14.png" alt="">
+            <div class="annoucement__desc">
+              <p class="annoucement__text">关于宝安沃尔玛超市伤人事件心理援助的通知</p>
+            </div>
+          </a>
+
         </div>
         <div class="annoucement">
-          <img class="annoucement__img" src="../images/index/g3.png" alt="">
-          <div class="annoucement__desc">
-            <p class="annoucement__text">爱不留守</p>
-          </div>
+          <a href="annoucement.html">
+            <img class="annoucement__img grow" src="../images/index/g3.png" alt="">
+            <div class="annoucement__desc">
+              <p class="annoucement__text">爱不留守</p>
+            </div>
+          </a>
+
         </div>
       </div>
       <a href="###" class="annoucement__view-btn btn">点击更多</a>
@@ -82,13 +88,13 @@
           <img class="service__img" src="../images/index/g3.png" alt="">
           <ul class="service__btn-list clearfix">
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">性侵防治</a>
+              <a href="###" class="service__btn btn rotate">性侵防治</a>
             </li>
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">压力管理</a>
+              <a href="###" class="service__btn btn rotate">压力管理</a>
             </li>
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">哀伤辅导</a>
+              <a href="###" class="service__btn btn rotate">哀伤辅导</a>
             </li>
           </ul>
         </div>
@@ -96,13 +102,13 @@
           <img class="service__img" src="../images/index/vcg21400453840.png" alt="">
           <ul class="service__btn-list clearfix">
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">性侵防治</a>
+              <a href="###" class="service__btn btn rotate">性侵防治</a>
             </li>
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">压力管理</a>
+              <a href="###" class="service__btn btn rotate">压力管理</a>
             </li>
             <li class="service__btn-item left">
-              <a href="###" class="service__btn btn">哀伤辅导</a>
+              <a href="###" class="service__btn btn rotate">哀伤辅导</a>
             </li>
           </ul>
         </div>
@@ -111,13 +117,15 @@
     <!-- End=我们的服务 -->
 
     <!-- Start=我要加入 -->
-    <div class="section section-joinus inner-center">
+    <div class="section section-joinus">
       <h2 class="section__heading section__heading-underline">我要加入</h2>
-      <div class="joinus-container">
-        <ul class="joinus inner-center">
+      <div class="joinus-container inner-center">
+        <ul class="joinus ">
           <li class="joinus_item">
-            <img class="joinus__icon" src="../images/index/group_20.png" alt="">
-            <a href="###" class="joinus__title">成为志愿者</a>
+            <a href="volunteer.html">
+              <img class="joinus__icon" src="../images/index/group_20.png" alt="">
+              <a href="###" class="joinus__title">成为志愿者</a>
+            </a>
           </li>
           <li class="joinus_item">
             <img class="joinus__icon" src="../images/index/group_21.png" alt="">
@@ -145,17 +153,19 @@
       <h2 class="section__heading section__heading-underline">案例</h2>
       <div class="case-container">
         <ul class="case clearfix">
-          <li class="case__item left">
-            <img class="case__img" src="../images/index/bitmap_copy.png" alt="">
-            <div class="case__desc">
-              <h4 class="case__title">春风课堂展现新景观—《绝处逢生--自杀干预与预防》培训花絮</h4>
-              <p class="case__release">
-                <span class="case__author">作者: 元下雨</span>
-                <span class="case__date">2012-3-14 10:52:00</span>
-              </p>
-            </div>
+          <li class="case__item left threed">
+            <a href="###">
+              <img class="case__img" src="../images/index/bitmap_copy.png" alt="">
+              <div class="case__desc">
+                <h4 class="case__title">春风课堂展现新景观—《绝处逢生--自杀干预与预防》培训花絮</h4>
+                <p class="case__release">
+                  <span class="case__author">作者: 元下雨</span>
+                  <span class="case__date">2012-3-14 10:52:00</span>
+                </p>
+              </div>
+            </a>
           </li>
-          <li class="case__item left">
+          <li class="case__item left threed">
             <img class="case__img" src="../images/index/2.png" alt="">
             <div class="case__desc">
               <h4 class="case__title">《保护自己，远离伤害》大学生社交安全公益活动随想</h4>
@@ -165,7 +175,7 @@
               </p>
             </div>
           </li>
-          <li class="case__item left">
+          <li class="case__item left threed">
             <img class="case__img" src="../images/index/1.png" alt="">
             <div class="case__desc">
               <h4 class="case__title">大学生如何防诈骗自保？春风网仿真培训受欢迎！</h4>
@@ -177,7 +187,7 @@
           </li>
         </ul>
         <ul class="case clearfix">
-          <li class="case__item left">
+          <li class="case__item left threed">
             <img class="case__img" src="../images/index/3.png" alt="">
             <div class="case__desc">
               <h4 class="case__title">交友安全秘籍讲座进校园</h4>
@@ -187,7 +197,7 @@
               </p>
             </div>
           </li>
-          <li class="case__item left">
+          <li class="case__item left threed">
             <img class="case__img" src="../images/index/4.png" alt="">
             <div class="case__desc">
               <h4 class="case__title">春风网志愿者海南12355青少年服务台</h4>
@@ -197,7 +207,7 @@
               </p>
             </div>
           </li>
-          <li class="case__item left">
+          <li class="case__item left threed">
             <img class="case__img" src="../images/index/bitmap.png" alt="">
             <div class="case__desc">
               <h4 class="case__title">马航失联心理援助专辑</h4>
@@ -219,31 +229,31 @@
       <p class="section__subHeading">这里有全国各地最专业的咨询师帮助您</p>
       <div class="swiper-container inner-center expert-container">
         <ul class="swiper-wrapper">
-          <li class="expert-item swiper-slide">
+          <li class="expert-item swiper-slide swing">
             <a href="###" class="expert">
               <img class="expert__portrait" src="../images/index/expert-01.png" alt="portrait">
               <p class="expert__name">李教授</p>
             </a>
           </li>
-          <li class="expert-item swiper-slide">
+          <li class="expert-item swiper-slide swing">
             <a href="###" class="expert">
               <img class="expert__portrait" src="../images/index/expert-02.png" alt="portrait">
               <p class="expert__name">杨教授</p>
             </a>
           </li>
-          <li class="expert-item swiper-slide">
+          <li class="expert-item swiper-slide swing">
             <a href="###" class="expert">
               <img class="expert__portrait" src="../images/index/expert-03.png" alt="portrait">
               <p class="expert__name">张导师</p>
             </a>
           </li>
-          <li class="expert-item swiper-slide">
+          <li class="expert-item swiper-slide swing">
             <a href="###" class="expert">
               <img class="expert__portrait" src="../images/index/expert-02.png" alt="portrait">
               <p class="expert__name">杨教授</p>
             </a>
           </li>
-          <li class="expert-item swiper-slide">
+          <li class="expert-item swiper-slide swing">
             <a href="###" class="expert">
               <img class="expert__portrait" src="../images/index/expert-03.png" alt="portrait">
               <p class="expert__name">张导师</p>
@@ -278,6 +288,7 @@
             <img class="data__img" src="../images/index/data_4.png" alt="">
           </li>
         </ul>
+
       </div>
     </div>
     <!-- End=数据 -->
@@ -374,8 +385,6 @@
   </div>
 
   @@include('common/footer.html')
-  <script src="../js/index.js"></script>
-
 </body>
 
 </html>

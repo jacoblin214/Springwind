@@ -20,6 +20,7 @@ const page = {
     this.setBackTotop("#2cb5a7", "#fff");
     this.setBodyMarginTop();
     this.backToTop();
+    this.highlightPage();
 
     // 密码显示隐藏点击事件
     var isVisible = false;
@@ -70,8 +71,6 @@ const page = {
           .siblings()
           .hide();
       });
-
-      /* ============== 定位到对应的section 部分=============== */
     });
   },
   prepareLogin: function() {
@@ -214,16 +213,20 @@ const page = {
     var $nav__links = $(".con-navbar a");
     // 声明链接的 url 地址
     var link_url;
-    $nav__links.each(function() {
+    $nav__links.each(function(index) {
       // 取得当前链接里的 href 属性
-      link_url = $(this).getAttribute("href");
+      link_url = $(this).attr("href");
       // 比较当前链接的 url 与当前页面的 url
       if (window.location.href.indexOf(link_url) != -1) {
-        $(this).addClass("here");
-        // 取得链接里的文本
-        var linktext = $(this).lastChild.nodeValue.toLocaleLowerCase();
-        // 设置 body 的 id 属性
-        document.body.setAttribute("id", linktext);
+        $(this)
+          .parent(".nav__item")
+          .addClass("is-actived")
+          .siblings()
+          .removeClass("is-actived");
+        // 取得当前链接地址.的位置，去除 .html后缀
+        var slice_end = link_url.indexOf(".");
+        // // 设置 body 的 id 属性
+        document.body.setAttribute("id", link_url.slice(0, slice_end));
       }
     });
   },

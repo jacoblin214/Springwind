@@ -1,0 +1,25 @@
+@import "../abstracts/animation.scss";
+@import "../abstracts/transition.scss";
+
+/* ========================= animate ========================= */
+.annoucement {
+  overflow: hidden;
+
+  &__img {
+    transition: 0.4s all;
+  }
+}
+
+.joinus_item {
+  transition: 0.4s all;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-2em);
+  }
+}
+
+.case {
+  &__item {
+    transition: 0.4s all;
+  }
+}

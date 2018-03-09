@@ -6,6 +6,7 @@
   z-index: 9999;
 
   width: 100%;
+  height: 60px;
   background: #fff;
   border-bottom: 0.1rem solid rgba(22, 22, 22, 0.2);
 }
@@ -17,7 +18,7 @@
     width: 60px;
     height: 60px;
     &-img {
-      height: inherit;
+      height: 58px;
       width: inherit;
     }
   }
@@ -26,6 +27,11 @@
     height: 60px;
     line-height: 60px;
     text-align: center;
+    .nav__item {
+      &.is-actived {
+        background: hsl(0%, 0%, 80%);
+      }
+    }
     & > .nav__item {
       float: left;
       width: 120px;

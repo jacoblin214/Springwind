@@ -28,6 +28,7 @@
 
 /* ====================== section-about ====================== */
 .about-container {
+  overflow: hidden;
   .about__title {
     margin-bottom: 60px;
     color: hsl(0, 0%, 20%);

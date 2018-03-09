@@ -2,7 +2,7 @@
  * @Author: Jecyu 
  * @Date: 2018-01-24 17:28:42 
  * @Last Modified by: Jecyu
- * @Last Modified time: 2018-03-08 17:33:42
+ * @Last Modified time: 2018-03-09 16:27:10
  */
 @import "abstracts/mixins.scss";
 
@@ -20,6 +20,7 @@
 
 @import "components/breadcrumb.scss";
 @import "components/map.scss";
+@import "components/animate.scss";
 
 @import "pages/home.scss";
 @import "pages/about.scss";
