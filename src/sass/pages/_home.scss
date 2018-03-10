@@ -166,9 +166,7 @@
 }
 
 /* =============== section-joinus ================= */
-.section-joinus {
-  // min-height: 400px;
-}
+
 .joinus-container {
   overflow: hidden;
 }
@@ -191,8 +189,6 @@
 }
 
 /* =================== section-cases ======================== */
-.section-case {
-}
 
 .case-container {
   width: 1550px;
@@ -237,8 +233,6 @@
 }
 
 /* =============== section-expert =============== */
-.section-expert {
-}
 
 .expert-container {
   margin-top: 88px;
@@ -274,8 +268,6 @@
 
 /* ======================= swiper ============================= */
 
-.swiper-container {
-}
 .swiper-wrapper {
   position: relative;
 }
@@ -296,6 +288,7 @@
 
 /* ============================= section-data ================================= */
 .section-data {
+  min-height: 500px;
   background: hsl(174, 61%, 54%) !important;
 
   .section__heading {
@@ -305,13 +298,46 @@
       border-color: hsl(0%, 0%, 100%);
     }
   }
-  .data__item {
-    width: 300px;
-    margin-bottom: 80px;
-  }
+  .data {
+    &__item {
+      position: relative;
+      width: 300px;
+      margin-bottom: 80px;
 
-  .data__img {
-    height: 334px;
+      text-align: center;
+      color: #fff;
+      &-img {
+        display: inline-block;
+        height: 260px;
+      }
+      &-title {
+        position: absolute;
+        left: 50%;
+        top: 180px;
+        transform: translateX(-50%);
+
+        font-size: 20px;
+      }
+
+      &-digital {
+        position: absolute;
+        left: 50%;
+        margin-top: 80px;
+        transform: translateX(-50%);
+
+        font-size: 50px;
+        sup {
+          position: absolute;
+          top: -10px;
+          right: -30px;
+        }
+      }
+
+      &-para {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
   }
 }
 

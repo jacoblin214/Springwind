@@ -5,7 +5,7 @@
  * @Last Modified time: 2017-12-07 9:34:05 am
  */
 
-const page = {
+var page = {
   init: function() {
     this.onload();
     this.bindEvent();

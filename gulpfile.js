@@ -7,6 +7,7 @@
 
 // Load plugins
 var gulp = require("gulp"), // ����������gulp���
+  babel = require("gulp-babel"),
   del = require("del"), // �ļ�ɾ��
   sass = require("gulp-ruby-sass"), // sass ����
   cached = require("gulp-cached"), // ���浱ǰ�����е��ļ���ֻ�����޸ĵ��ļ�ͨ���ܵ�
@@ -82,7 +83,8 @@ gulp.task("styleReload", ["sass", "css"], function() {
 
 // script ������ *.min.js������ js �����ѹ����δѹ�������汾��
 gulp.task("script", function() {
-  return (gulp
+  return (
+    gulp
       .src(["src/js/**/*.js"])
       .pipe(cached("script"))
       .pipe(gulp.dest("dist/js"))
@@ -93,16 +95,25 @@ gulp.task("script", function() {
       // .pipe(gulp.dest('dist/js'))
       // .pipe(rename({ suffix: ".min" }))
       // .pipe(uglify())
+      // .pipe(
+      //   babel({
+      //     // 编译成 es5
+      //     presets: [["es2015"], { modules: false }],
+      //     plugins: ["transform-runtime"]
+      //   })
+      // )
       .on("error", function(err) {
         gutil.log(gutil.colors.red("[Errors]"), err.toString());
       })
-      .pipe(gulp.dest("./dist/js")) );
+      .pipe(gulp.dest("./dist/js"))
+  );
   // .pipe(livereload()) );
 });
 
 // image
 gulp.task("image", function() {
-  return (gulp
+  return (
+    gulp
       .src("src/images/**/*.{jpg,jpeg,png,gif}")
       .pipe(cached("images"))
       .pipe(
@@ -114,7 +125,8 @@ gulp.task("image", function() {
         })
       )
       // ȡֵ��Χ��0-7���Ż��ȼ���,�Ƿ�����ѹ��jpgͼƬ���Ƿ����ɨ��gif������Ⱦ���Ƿ����Ż�svgֱ����ȫ�Ż�
-      .pipe(gulp.dest("dist/images")) );
+      .pipe(gulp.dest("dist/images"))
+  );
 });
 
 // html ���� html �ļ�����������
